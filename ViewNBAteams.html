@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <title>Pantasi Pros</title>
@@ -189,32 +189,131 @@ button {
   cursor: pointer;
 }
 
+.navigation-menu {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+/* Style for the navigation links */
+        .navigation-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .navigation-menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .navigation-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Adjust the spacing for the content below the menu */
+        body {
+            padding-top: 70px;
+        }
+
+
+        /* Add styles for the dropdown container */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add some margin for spacing */
+}
+
+/* Style the labels above the dropdowns */
+label {
+    font-weight: bold;
+}
+
+/* Style the select elements */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Style the select elements on hover */
+select:hover {
+    border-color: #007BFF;
+    background-color: #fff;
+}
+
+/* Style the select elements when focused */
+select:focus {
+    border-color: #007BFF;
+    background-color: #fff;
+}
+
+/* Reduce the max-height of the dropdown list */
+select::-ms-expand,
+select {
+    max-height: 50px; /* Set max-height to half the default height */
+}
+
+/* Style for the button container */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Add space between buttons */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+/* Style for the copy button */
+button#copyButton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    width: 120px; /* Set a fixed width for the rectangular button */
+    height: 40px; /* Set a fixed height for the rectangular button */
+    cursor: pointer;
+}
+
+/* Style for the return to homepage button */
+button#returnButton {
+    background-color: #333; /* Change background color */
+    color: white;
+    border: none;
+    width: 120px; /* Set a fixed width for the rectangular button */
+    height: 40px; /* Set a fixed height for the rectangular button */
+    cursor: pointer;
+}
+
 
     </style>
 </head>
 
 <body>
-    <div id="selectedPlayersContainer" class="selected-players-container">
-    <h2>Your Lineup</h2>
-    <ul id="selectedPlayersList"></ul>
-   </div>
+    <div class="navigation-menu">
+        <ul>
+            <li><a href="#" id="rules">Rules</a></li>
+            <li><a href="#standings">Standings</a></li>
+            <li><a href="#averages">FPs Averages</a></li>
+            <li><a href="#fbgroup">Facebook Group</a></li>
 
-
-    <div id="msgGamesDisplay" class="message-box">
-        <h2>NBA Games Today 9/1/23</h2>
-        <p>Lakers @ Bulls 8:30am</p>
-        <p>Kings @ Sixers 8:30am</p>
-        <p>Bucks @ Celtics 8:30am</p>
+        </ul>
     </div>
 
-    <div id="msgLink" class="message-box">
-        <h2>Click get Lineup, and submit it here:</h2>
-        <p>https://www.facebook.com/groups/2268460530042250</p>
-    </div>
-
-    <h1>Select Players</h1>
-
-    <label for="pgSelect">Point Guards:</label>
+    <label for="pgSelect">Point Guards</label>
+    <div class="dropdown-container">
     <select id="pgSelect">
         <option value="" disabled selected>Please select a Point Guard</option>
         <!-- Add options for Point Guards here -->
@@ -224,9 +323,36 @@ button {
         <option value="Stephen Curry" data-price="68k">Stephen Curry - 68k</option>
         <option value="D'Angelo Russell" data-price="45k">D'Angelo Russell - 45k</option>
         <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Youn" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Youg" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Youn" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Youg" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+        <option value="Trae Young" data-price="32k">Trae Young - 32k</option>
+
     </select>
 
-    <label for="sgSelect">Shooting Guards:</label>
+    <label for="sgSelect">Shooting Guards</label>
+    <div class="dropdown-container">
     <select id="sgSelect">
         <option value="" disabled selected>Please select a Shooting Guard</option>
         <!-- Add options for Shooting Guards here -->
@@ -240,7 +366,8 @@ button {
         <option value="Josh Hart" data-price="28k">Josh Hart - 28k</option>
     </select>
 
-     <label for="sfSelect">Small Forwards:</label>
+     <label for="sfSelect">Small Forwards</label>
+     <div class="dropdown-container">
      <select id="sfSelect">
     <option value="" disabled selected>Please select a Small Forward</option>
     <!-- Add options for Small Forwards here -->
@@ -251,16 +378,28 @@ button {
     <option value="Jayson Tatum" data-price="65k">Jayson Tatum - 65k</option>
     <option value="Gordon Hayward" data-price="45k">Gordon Hayward - 45k</option>
    </select>
-   
-   
 
-    <p>Total Price: <span id="totalPrice">0</span></p>
-    <p>Available Price: <span id="requiredPrice">305k</span></p>
-    <p>Budget Left: <span id="budgetLeft">305</span></p>
+   <div id="selectedPlayersContainer" class="selected-players-container">
+    <h2>Your Lineup</h2>
+    <ul id="selectedPlayersList"></ul>
+    
+   <div class="price-info">
+    <span id="totalPriceLineup">Salary: 0k</span>
+</div>
+</div>
 
-    <button onclick="goBack()">Return to Home page</button>
-    <button id="copyButton">Get Lineup</button>
+<button id="copyButton">Get Lineup</button>
+    <button id="returnButton" onclick="goBack()">Return to Home page</button>
+</div>
 
+
+
+    <div id="msgGamesDisplay" class="message-box">
+        <h2>NBA Games Today 9/1/23</h2>
+        <p>Lakers @ Bulls 8:30am</p>
+        <p>Kings @ Sixers 8:30am</p>
+        <p>Bucks @ Celtics 8:30am</p>
+    </div>
 
     <script>
         var copyButton = document.getElementById("copyButton");
@@ -276,8 +415,11 @@ button {
         var sgSelect = document.getElementById("sgSelect");
         var sfSelect = document.getElementById("sfSelect");
         var selectedPlayersList = document.getElementById("selectedPlayersList");
-        var totalPriceElement = document.getElementById("totalPrice");
-        var budgetLeftElement = document.getElementById("budgetLeft");
+        // Update the total price and budget elements
+       var totalPriceElement = document.getElementById("totalPriceLineup");
+
+
+
 
         pgSelect.addEventListener("change", function() {
             if (isMaxPlayersSelected()) {
@@ -308,8 +450,7 @@ button {
             selectedPlayersPG.push(pgName);
             totalSelectedPrice += playerPrice;
             budgetLeft -= playerPrice;
-            totalPriceElement.textContent = totalSelectedPrice + "k";
-            budgetLeftElement.textContent = budgetLeft + "k";
+           totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
 
             // Create and add the player to the selected players list
             addPlayerToSelectedList(pgName, true);
@@ -346,8 +487,10 @@ button {
             selectedPlayersSG.push(sgName);
             totalSelectedPrice += playerPrice;
             budgetLeft -= playerPrice;
-            totalPriceElement.textContent = totalSelectedPrice + "k";
-            budgetLeftElement.textContent = budgetLeft + "k";
+            // Update the total price and budget elements
+          totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
+
+
 
             // Create and add the player to the selected players list
             addPlayerToSelectedList(sgName, false);
@@ -399,8 +542,10 @@ button {
 
                     totalSelectedPrice -= parseInt(playerOption.getAttribute("data-price"));
                     budgetLeft += parseInt(playerOption.getAttribute("data-price"));
-                    totalPriceElement.textContent = totalSelectedPrice + "k";
-                    budgetLeftElement.textContent = budgetLeft + "k";
+                    // Update the total price and budget elements
+totalPriceElement.textContent = totalSelectedPrice + "k/" + requiredPrice + "k";
+budgetLeftElement.textContent = budgetLeft + "k/" + requiredPrice + "k";
+
                 }
             }
         }
@@ -426,8 +571,10 @@ function removePlayer(playerName, isPG, isSF) {
 
                 totalSelectedPrice -= parseInt(playerOption.getAttribute("data-price"));
                 budgetLeft += parseInt(playerOption.getAttribute("data-price"));
-                totalPriceElement.textContent = totalSelectedPrice + "k";
-                budgetLeftElement.textContent = budgetLeft + "k";
+                // Update the total price and budget elements
+totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
+budgetLeftElement.textContent = budgetLeft + "k/" + requiredPrice + "k";
+
             }
         }
     }
@@ -495,8 +642,10 @@ sfSelect.addEventListener("change", function() {
     selectedPlayersSF.push(sfName);
     totalSelectedPrice += playerPrice;
     budgetLeft -= playerPrice;
-    totalPriceElement.textContent = totalSelectedPrice + "k";
-    budgetLeftElement.textContent = budgetLeft + "k";
+    // Update the total price and budget elements
+   totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
+
+
 
     // Create and add the player to the selected players list
     addPlayerToSelectedList(sfName, false, true); // Pass true for isSF
@@ -563,4 +712,28 @@ copyButton.addEventListener("click", function () {
     </script>
 </body>
 </html>
+
+
+    
+
+
+    
+    
+
+
+
+    
+    
+
+           
+        
+                
+
+    
+    
+    
+    
+
+
+
 

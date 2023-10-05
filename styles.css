@@ -1,0 +1,310 @@
+/* Add CSS styles for the message boxes */
+        .message-box {
+            position: absolute;
+            bottom: 10px;
+            width: 30%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #msgGamesDisplay {
+            right: 40%;
+        }
+
+        #msgLink {
+            right: 10px;
+        }
+
+        #totalPrice, #requiredPrice, #budgetLeft {
+            font-family: 'Roboto Slab', sans-serif;
+            font-weight: bold;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+        
+        /* Add styles for the selected players container */
+    .selected-players-container {
+    border: 2px solid #007BFF;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    max-width: 300px;
+ }
+
+    .selected-players-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+}
+
+   .selected-players-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+  .selected-players-container li {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between; /* Align elements with space in between */
+    align-items: center;
+}
+
+   .selected-players-container span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Glowing black border for text */
+}
+
+/* Add a glowing black border on hover */
+body a, body button {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Default text color */
+    transition: color 0.3s, text-shadow 0.3s; /* Add smooth transition */
+}
+
+body a:hover, body button:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Increase the intensity of the glowing border */
+    color: #00bfff; /* Change text color on hover (e.g., to a bright blue) */
+}
+  
+/* Circular design for position label */
+.position-circle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent; /* Make the background transparent */
+    border: 2px solid #007BFF; /* Add a blue border */
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 12px; /* Adjust the font size */
+}
+
+
+
+
+/* Modify the styles for the "Your Lineup" header */
+.selected-players-container h2 {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white for contrast */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center the text horizontally */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.selected-players-container h2::before {
+    content: ""; /* Add a pseudo-element for the glowing border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #00bfff; /* Set the border color to a bright blue */
+    border-radius: 5px; /* Add rounded corners */
+    opacity: 0; /* Initially make it transparent */
+    animation: glow 2s infinite; /* Apply the glowing animation */
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.2; /* Initial opacity */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a subtle box-shadow */
+    }
+    50% {
+        opacity: 0.8; /* Maximum opacity */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Increase the box-shadow */
+    }
+    100% {
+        opacity: 0.2; /* Back to initial opacity */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Back to initial box-shadow */
+    }
+}
+
+/* Add line separators between displays */
+.message-box,
+.selected-players-container {
+    background-color: #111; /* Dark gray background for displays */
+    border: 1px solid #444; /* Add a border for separation */
+    border-radius: 5px; /* Add rounded corners */
+    margin: 20px 0; /* Add margin for spacing between displays */
+    padding: 10px; /* Add padding for content spacing */
+}
+
+.selected-players-container button {
+    color: #000; /* Set text color to black for remove buttons */
+}
+
+/* Modify the button styles to make them appear 3D */
+body button {
+    text-decoration: none;
+    color: #fff; /* Default text color */
+    background-color: #007BFF; /* Button background color */
+    border: 1px solid #0056b3; /* Darker border color */
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Add smooth transitions */
+
+    /* Add a 3D-like effect with box-shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff; /* White text on hover */
+    transform: translateY(-2px); /* Move the button up slightly on hover for a 3D effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase the box-shadow on hover for a lift effect */
+}
+
+
+/* Style for the copy button */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.navigation-menu {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+/* Style for the navigation links */
+        .navigation-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .navigation-menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .navigation-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Adjust the spacing for the content below the menu */
+        body {
+            padding-top: 70px;
+        }
+
+
+        /* Add styles for the dropdown container */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add some margin for spacing */
+}
+
+/* Style the labels above the dropdowns */
+label {
+    font-weight: bold;
+}
+
+/* Style the select elements */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Style the select elements on hover */
+select:hover {
+    border-color: #007BFF;
+    background-color: #fff;
+}
+
+/* Style the select elements when focused */
+select:focus {
+    border-color: #007BFF;
+    background-color: #fff;
+}
+
+/* Reduce the max-height of the dropdown list */
+select::-ms-expand,
+select {
+    max-height: 50px; /* Set max-height to half the default height */
+}
+
+/* Style for the button container */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Add space between buttons */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+/* Style for the copy button */
+button#copyButton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    width: 120px; /* Set a fixed width for the rectangular button */
+    height: 40px; /* Set a fixed height for the rectangular button */
+    cursor: pointer;
+}
+
+/* Style for the return to homepage button */
+button#returnButton {
+    background-color: #333; /* Change background color */
+    color: white;
+    border: none;
+    width: 120px; /* Set a fixed width for the rectangular button */
+    height: 40px; /* Set a fixed height for the rectangular button */
+    cursor: pointer;
+}
+
+.sg-circle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 2px solid #007BFF;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+

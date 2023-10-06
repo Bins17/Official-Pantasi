@@ -111,6 +111,8 @@
 </div>
 
 
+
+    
    <div id="selectedPlayersContainer" class="selected-players-container">
     <h2>Your Lineup</h2>
     <ul id="selectedPlayersList"></ul>
@@ -125,6 +127,7 @@
 </div>
 
 
+
     <div id="msgGamesDisplay" class="message-box">
         <h2>NBA Games Today 9/1/23</h2>
         <p>Lakers @ Bulls 8:30am</p>
@@ -132,10 +135,9 @@
         <p>Bucks @ Celtics 8:30am</p>
     </div>
 
-
-
     <script>
-        
+        var copyButton = document.getElementById("copyButton");
+
         var selectedPlayersPG = [];
         var selectedPlayersSG = [];
         var selectedPlayersSF = []; 
@@ -151,19 +153,17 @@
         var pfSelect = document.getElementById("pfSelect");
         var cSelect = document.getElementById("cSelect");
         var selectedPlayersList = document.getElementById("selectedPlayersList");
+        // Update the total price and budget elements
         var totalPriceElement = document.getElementById("totalPriceLineup");
-        var copyButton = document.getElementById("copyButton");
-  
 
-         function goBack() {
-            window.history.back();
-        }
-
-
+           
+           function isPlayerSelected(playerName, playerArray) {
+    return playerArray.includes(playerName);
+}
         pgSelect.addEventListener("change", function() {
                     if (isMaxPlayersSelected()) {
         alert("You have already selected the maximum number of players (5).");
-        pgSelect.selectedIndex = 0; // Reset the dropdown to its initial state
+        pgSelect.selectedIndex = 0; // Reset the dropdown 
         return;
     }
             var selectedOption = pgSelect.options[pgSelect.selectedIndex];
@@ -180,16 +180,17 @@
 
             // Check if adding the player exceeds the budget
             if (totalSelectedPrice + playerPrice > requiredPrice) {
+                // Display an alert that the budget would be exceeded
                 alert("Adding this player would exceed the budget.");
+                pgSelect.selectedIndex = 0; 
                 return;
             }
-            disableAllOptionsExceptSelected(pgSelect, pgName);
-
             selectedPlayersPG.push(pgName);
             totalSelectedPrice += playerPrice;
             budgetLeft -= playerPrice;
            totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
-           //add the player to the selected players list
+
+            // Create and add the player to the selected players list
             addPlayerToSelectedList(pgName, true);
 
         });
@@ -197,7 +198,7 @@
         sgSelect.addEventListener("change", function() {
             if (isMaxPlayersSelected()) {
         alert("You have already selected the maximum number of players (5).");
-        sgSelect.selectedIndex = 0; // Reset the dropdown to its initial state
+        sgSelect.selectedIndex = 0; // Reset the dropdown 
         return;
     }
             var selectedOption = sgSelect.options[sgSelect.selectedIndex];
@@ -209,24 +210,28 @@
                 removePlayer(sgName, false);
                 return;
             }
+
             var playerPrice = parseInt(selectedOption.getAttribute("data-price"));
 
+            // Check if adding the player exceeds the budget
             if (totalSelectedPrice + playerPrice > requiredPrice) {
+                // Display an alert that the budget would be exceeded
                 alert("Adding this player would exceed the budget.");
+                sgSelect.selectedIndex = 0; 
                 return;
             }
-            disableAllOptionsExceptSelected(sgSelect, sgName);
 
+            // Handle selection of Shooting Guard here
             selectedPlayersSG.push(sgName);
             totalSelectedPrice += playerPrice;
             budgetLeft -= playerPrice;
-        
+            // Update the total price and budget elements
           totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
 
-            // Create and add the player to the selected players list
             addPlayerToSelectedList(sgName, false);
+           
+            
         });
-
 
         function addPlayerToSelectedList(playerName, isPG) {
             var listItem = document.createElement("li");
@@ -249,6 +254,10 @@
             selectedPlayersList.appendChild(listItem);
         }
 
+        function goBack() {
+            window.history.back();
+        }
+
         function removePlayer(playerName, isPG) {
             var playerArray = isPG ? selectedPlayersPG : selectedPlayersSG;
             var playerIndex = playerArray.indexOf(playerName);
@@ -269,15 +278,12 @@
                     totalSelectedPrice -= parseInt(playerOption.getAttribute("data-price"));
                     budgetLeft += parseInt(playerOption.getAttribute("data-price"));
                     // Update the total price and budget elements
-                   totalPriceElement.textContent = totalSelectedPrice + "k/" + requiredPrice + "k";
-                  budgetLeftElement.textContent = budgetLeft + "k/" + requiredPrice + "k";
+totalPriceElement.textContent = totalSelectedPrice + "k/" + requiredPrice + "k";
+budgetLeftElement.textContent = budgetLeft + "k/" + requiredPrice + "k";
 
                 }
             }
         }
-
-
-
 
  function addPlayerToSelectedList(playerName, isPG, isSF, isPF, isCenter) {
     var listItem = document.createElement("li");
@@ -337,9 +343,10 @@
 
 
         
-     function removePlayer(playerName, isPG, isSF, isPF, isCenter) {
+function removePlayer(playerName, isPG, isSF, isPF, isCenter) {
     var playerArray;
     var selectElement;
+
 
     if (isPG) {
         playerArray = selectedPlayersPG;
@@ -362,26 +369,31 @@
     if (playerIndex !== -1) {
         playerArray.splice(playerIndex, 1);
 
-             var listItem = document.getElementById("player_" + playerName);
+        var listItem = document.getElementById("player_" + playerName);
         if (listItem) {
             selectedPlayersList.removeChild(listItem);
-            totalSelectedPrice -= parseInt(selectElement.options[selectElement.selectedIndex].getAttribute("data-price"));
+
+            var playerOption = selectElement.querySelector(`option[value="${playerName}"]`);
+
+            if (playerOption) {
+                playerOption.selected = false;
+                playerOption.disabled = false; // Re-enable the option
             }
-        }
-        // Re-enable all options within the current dropdown list
-    for (var i = 0; i < selectElement.options.length; i++) {
-        selectElement.options[i].disabled = false;
-        selectElement.selectedIndex = 0;
-    }
+
+            totalSelectedPrice -= parseInt(playerOption.getAttribute("data-price"));
+            budgetLeft += parseInt(playerOption.getAttribute("data-price"));
+            // Update the total price and budget elements
             totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
 
-         }
-       
+         selectElement.selectedIndex = 0;
+          }
+        }
+       }
 
 sfSelect.addEventListener("change", function() {
     if (isMaxPlayersSelected()) {
         alert("You have already selected the maximum number of players (5).");
-        sfSelect.selectedIndex = 0; // Reset dropdown 
+        sfSelect.selectedIndex = 0; // Reset the dropdown 
         return;
     }
     var selectedOption = sfSelect.options[sfSelect.selectedIndex];
@@ -400,10 +412,9 @@ sfSelect.addEventListener("change", function() {
     if (totalSelectedPrice + playerPrice > requiredPrice) {
         // Display an alert that the budget would be exceeded
         alert("Adding this player would exceed the budget.");
+        sfSelect.selectedIndex = 0; 
         return;
     }
-    disableAllOptionsExceptSelected(sfSelect, sfName);
-
 
     // Handle selection of Small Forward here
     selectedPlayersSF.push(sfName);
@@ -413,23 +424,11 @@ sfSelect.addEventListener("change", function() {
    totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
 
 
+
     // Create and add the player to the selected players list
-    addPlayerToSelectedList(sfName, false, true); 
+    addPlayerToSelectedList(sfName, false, true); // Pass true for isSF
+    
 });
-
-
-// Function to disable selected players in the dropdown
-function disableSelectedPlayersInDropdown(selectedPlayers, selectElement) {
-    const options = selectElement.options;
-    for (let i = 0; i < options.length; i++) {
-        const option = options[i];
-        if (selectedPlayers.includes(option.value)) {
-            option.disabled = true;
-        } else {
-            option.disabled = false;
-        }
-    }
-}
 
     function isMaxPlayersSelected() {
     return (
@@ -443,9 +442,15 @@ function disableSelectedPlayersInDropdown(selectedPlayers, selectElement) {
 }
 
 
+// Get the copy button element
+var copyButton = document.getElementById("copyButton");
+
+// Add a click event listener to the copy button
 copyButton.addEventListener("click", function () {
+    // Create a string containing the selected players
     var selectedPlayersText = "[Type your name here]\n";
 
+    // Loop through the selected players and add them to the string
     selectedPlayersPG.forEach(function (player) {
     selectedPlayersText += "PG: " + player + " " + pgSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + "\n";
     });
@@ -466,6 +471,8 @@ copyButton.addEventListener("click", function () {
    selectedPlayersC.forEach(function (player) {
         selectedPlayersText += "C: " + player + " " + cSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + "\n";
     });
+   selectedPlayersText += "TOTAL: " + totalSelectedPrice + "/" + requiredPrice + "k";
+
 
 
     // Create a temporary textarea element to hold the text
@@ -507,9 +514,9 @@ pfSelect.addEventListener("change", function() {
     if (totalSelectedPrice + playerPrice > requiredPrice) {
         // Display an alert that the budget would be exceeded
         alert("Adding this player would exceed the budget.");
+        pfSelect.selectedIndex = 0; // Reset the dropdown
         return;
     }
-     disableAllOptionsExceptSelected(pfSelect, pfName);
 
     // Handle selection of Power Forward here
     selectedPlayersPF.push(pfName);
@@ -520,57 +527,103 @@ pfSelect.addEventListener("change", function() {
 
     // Create and add the player to the selected players list
     addPlayerToSelectedList(pfName, false, false, true); // Pass true for isPF
+});
 
-           cSelect.addEventListener("change", function () {
+
+
+cSelect.addEventListener("change", function () {
             if (isMaxPlayersSelected()) {
                 alert("You have already selected the maximum number of players (5).");
-                cSelect.selectedIndex = 0; // Reset the dropdown to its initial state
+                cSelect.selectedIndex = 0; // Reset the dropdown 
                 return;
             }
             var selectedOption = cSelect.options[cSelect.selectedIndex];
             var centerName = selectedOption.value;
 
-            // Check if the player is already selected
             if (selectedPlayersC.includes(centerName)) {
-                // Player is already selected, remove it from the selection
                 removePlayer(centerName, false, false, false, true); // Pass true for isCenter
                 return;
             }
             var playerPrice = parseInt(selectedOption.getAttribute("data-price"));
 
             if (totalSelectedPrice + playerPrice > requiredPrice) {
-                // Display an alert that the budget would be exceeded
                 alert("Adding this player would exceed the budget.");
+                cSelect.selectedIndex = 0;
                 return;
             }
-            disableAllOptionsExceptSelected(cSelect, centerName);
-           });
 
-            // Handle selection of Center here
             selectedPlayersC.push(centerName);
             totalSelectedPrice += playerPrice;
             budgetLeft -= playerPrice;
 
-            // Update the total price and budget elements
             totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
 
-            // Create and add the player to the selected players list
             addPlayerToSelectedList(centerName, false, false, false, true); // Pass true for isCenter
-
         });
 
-        function disableAllOptionsExceptSelected(selectElement, selectedValue) {
-    for (var i = 0; i < selectElement.options.length; i++) {
-        var option = selectElement.options[i];
-        if (option.value !== "" && option.value !== selectedValue) {
-            option.disabled = true;
-        }
-    }
-}
 
+        function addRemoveButtonEventListener(centerName, isCenter) {
+            var removeButton = document.getElementById("removeButton_" + centerName);
+            removeButton.addEventListener("click", function () {
+                removePlayer(centerName, false, false, false, true); // Pass true for isCenter
+            });
+        }
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+     
+       
+
+
+    
+        
+
+
+        
+           
+        
+
+           
+
+
+ 
+        
+    
+
+
+        
+     
+    
+   
+  
+   
+
+    
+
+
+
 
 
    

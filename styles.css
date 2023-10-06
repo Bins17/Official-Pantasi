@@ -1,23 +1,16 @@
 
-        /* Add CSS styles for the message boxes */
-        .message-box {
-            position: absolute;
-            bottom: 10px;
-            width: 30%;
-            background-color: #f0f0f0;
-            padding: 10px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        }
+        
+        
 
-        #msgGamesDisplay {
-            right: 40%;
-        }
+    
 
-        #msgLink {
-            right: 10px;
-        }
+    
 
-        #totalPrice, #requiredPrice, #budgetLeft {
+
+          
+            
+
+#totalPrice, #requiredPrice, #budgetLeft {
             font-family: 'Roboto Slab', sans-serif;
             font-weight: bold;
         }
@@ -140,8 +133,7 @@ body a:hover, body button:hover {
     }
 }
 
-/* Add line separators between displays */
-.message-box,
+
 .selected-players-container {
     background-color: #111; /* Dark gray background for displays */
     border: 1px solid #444; /* Add a border for separation */
@@ -264,7 +256,7 @@ select {
 }
 
 /* Style for the copy button */
-button#copyButton {
+button#copyButton, #returnButton {
     background-color: #007BFF;
     color: white;
     border: none;
@@ -273,16 +265,9 @@ button#copyButton {
     cursor: pointer;
 }
 
-/* Style for the return to homepage button */
-button#returnButton {
-    background-color: #333; /* Change background color */
-    color: white;
-    border: none;
-    width: 120px; /* Set a fixed width for the rectangular button */
-    height: 40px; /* Set a fixed height for the rectangular button */
-    cursor: pointer;
+#returnButton {
+  margin-right: 1080px;
 }
-
 .sg-circle {
     display: inline-block;
     width: 24px;
@@ -346,6 +331,17 @@ select option {
 }
 
 
+
+
+
+    
+   
+
+
+
+
+
+  
 
     
 

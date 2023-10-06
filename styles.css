@@ -308,3 +308,61 @@ button#returnButton {
 }
 
 
+
+/* Add this to your existing CSS or styles.css file */
+.success-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.success-box p {
+  margin: 0;
+}
+
+.success-box.show {
+  display: block;
+}
+
+/* Add this CSS to your <style> or styles.css file */
+select {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold; /* Make the font bold */
+    padding: 8px; /* Add padding for better readability */
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-radius: 4px; /* Add rounded corners for a modern look */
+    background-color: #f9f9f9; /* Light gray background color */
+    color: #333; /* Dark text color */
+    /* Add any other desired styles here */
+}
+
+/* Style the dropdown options (players) */
+select option {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px; /* Slightly smaller font size for options */
+    font-weight: normal; /* Reset font weight for options */
+    /* Add any other desired styles here */
+}
+
+
+    
+
+   
+
+
+
+         
+    
+
+
+ 

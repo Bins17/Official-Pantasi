@@ -1,4 +1,5 @@
 
+     
         var copyButton = document.getElementById("copyButton");
 
         var selectedPlayersPG = [];
@@ -10,7 +11,6 @@
         var requiredPrice = 305;
         var budgetLeft = requiredPrice - totalSelectedPrice;
 
-
         var pgSelect = document.getElementById("pgSelect");
         var sgSelect = document.getElementById("sgSelect");
         var sfSelect = document.getElementById("sfSelect");
@@ -19,6 +19,7 @@
         var selectedPlayersList = document.getElementById("selectedPlayersList");
         // Update the total price and budget elements
         var totalPriceElement = document.getElementById("totalPriceLineup");
+        var budgetLeftElement = document.getElementById("budgetLeftValue");
 
            
            function isPlayerSelected(playerName, playerArray) {
@@ -205,6 +206,7 @@ budgetLeftElement.textContent = budgetLeft + "k/" + requiredPrice + "k";
     };
     listItem.appendChild(removeButton);
     selectedPlayersList.appendChild(listItem);
+    updateBudgetLeft();
 }
 
 
@@ -252,6 +254,7 @@ function removePlayer(playerName, isPG, isSF, isPF, isCenter) {
             totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
 
          selectElement.selectedIndex = 0;
+         updateBudgetLeft();
           }
         }
        }
@@ -293,6 +296,7 @@ sfSelect.addEventListener("change", function() {
 
     // Create and add the player to the selected players list
     addPlayerToSelectedList(sfName, false, true); // Pass true for isSF
+    updateBudgetLeft();
     
 });
 
@@ -433,8 +437,9 @@ cSelect.addEventListener("change", function () {
             totalPriceElement.textContent = "Salary: " + totalSelectedPrice + "k/" + requiredPrice + "k";
 
             addPlayerToSelectedList(centerName, false, false, false, true); // Pass true for isCenter
+            updateBudgetLeft();
         });
-
+        updateBudgetLeft();
 
         function addRemoveButtonEventListener(centerName, isCenter) {
             var removeButton = document.getElementById("removeButton_" + centerName);
@@ -450,6 +455,9 @@ cSelect.addEventListener("change", function () {
     // Hide the success box after 3 seconds (3000 milliseconds)
     setTimeout(function () {
         successBox.classList.remove("show");
-    }, 3000); // 3 seconds
+    }, 2000); // 2 seconds
 }
 
+function updateBudgetLeft() {
+   budgetLeftElement.innerHTML = "Left: <span style='color: white; background-color: transparent; padding: 2px;'><span style='color: lightgreen;'>" + budgetLeft  + "k</span></span>";
+}   

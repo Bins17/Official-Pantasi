@@ -1,4 +1,5 @@
-/* Add CSS styles for the message boxes */
+
+        /* Add CSS styles for the message boxes */
         .message-box {
             position: absolute;
             bottom: 10px;
@@ -234,17 +235,7 @@ label {
 }
 
 /* Style the select elements */
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    font-size: 16px;
-    color: #333;
-    outline: none;
-    transition: border-color 0.3s, background-color 0.3s;
-}
+
 
 /* Style the select elements on hover */
 select:hover {
@@ -333,16 +324,16 @@ button#returnButton {
   display: block;
 }
 
-/* Add this CSS to your <style> or styles.css file */
+/* Style the select elements with a light background color */
 select {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
-    font-weight: bold; /* Make the font bold */
-    padding: 8px; /* Add padding for better readability */
-    border: 1px solid #ccc; /* Add a subtle border */
-    border-radius: 4px; /* Add rounded corners for a modern look */
-    background-color: #f9f9f9; /* Light gray background color */
-    color: #333; /* Dark text color */
+    font-weight: bold;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0; /* Set a light gray background color */
+    color: #333;
     /* Add any other desired styles here */
 }
 
@@ -355,7 +346,19 @@ select option {
 }
 
 
+
     
+
+   
+
+ 
+  
+   
+
+  
+      
+
+ 
 
    
 

@@ -1,16 +1,15 @@
+body {
+    background-image: url('Steph.gif');
+    background-size: cover; /* Use the original size of the GIF */
+    background-repeat: no-repeat; /* To prevent repeating the GIF */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    /* Other CSS properties for the body element */
 
-        
-        
-
-    
-
-    
+}
 
 
-          
-            
 
-#totalPrice, #requiredPrice, #budgetLeft {
+        #totalPrice, #requiredPrice, #budgetLeft {
             font-family: 'Roboto Slab', sans-serif;
             font-weight: bold;
         }
@@ -25,7 +24,7 @@
             animation: blink 1s infinite;
         }
         
-        /* Add styles for the selected players container */
+   /* Add styles for the selected players container */
     .selected-players-container {
     border: 2px solid #007BFF;
     padding: 10px;
@@ -34,11 +33,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     max-width: 300px;
+
  }
 
     .selected-players-container h2 {
     font-size: 18px;
-    margin-bottom: 10px;
+   margin-bottom: 10px;
     
 }
 
@@ -119,11 +119,11 @@ body a:hover, body button:hover {
 }
 
 @keyframes glow {
-    0% {
+    10% {
         opacity: 0.2; /* Initial opacity */
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a subtle box-shadow */
     }
-    50% {
+    70% {
         opacity: 0.8; /* Maximum opacity */
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Increase the box-shadow */
     }
@@ -132,7 +132,6 @@ body a:hover, body button:hover {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Back to initial box-shadow */
     }
 }
-
 
 .selected-players-container {
     background-color: #111; /* Dark gray background for displays */
@@ -255,19 +254,7 @@ select {
     margin-top: 20px; /* Add margin for spacing */
 }
 
-/* Style for the copy button */
-button#copyButton, #returnButton {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    width: 120px; /* Set a fixed width for the rectangular button */
-    height: 40px; /* Set a fixed height for the rectangular button */
-    cursor: pointer;
-}
 
-#returnButton {
-  margin-right: 1080px;
-}
 .sg-circle {
     display: inline-block;
     width: 24px;
@@ -330,38 +317,99 @@ select option {
     /* Add any other desired styles here */
 }
 
+/* Add this to your styles.css file */
+.game-list-container {
+    height: 200px; /* Set a fixed height as needed */
+    overflow-y: auto; /* Add a scrollbar when content exceeds the height */
+}
 
 
 
+  .game-list-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+}
+
+   .game-list-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Modify the styles for the "Your Lineup" header */
+.games-list-container h2 {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white for contrast */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center the text horizontally */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.games-list-container h2::before {
+    content: ""; /* Add a pseudo-element for the glowing border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #00bfff; /* Set the border color to a bright blue */
+    border-radius: 5px; /* Add rounded corners */
+    opacity: 0; /* Initially make it transparent */
+    animation: glow 2s infinite; /* Apply the glowing animation */
+}
+.game-list-container span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Add this to your styles.css file */
+.game-list-container {
+    max-height: 200px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+    position: relative; /* Add relative positioning to the container */
+}
+
+.game-list-content {
+    max-height: calc(100% - 30px); /* Adjust the height to account for the header */
+    overflow-y: auto;
+}
+
+#copyButton {
+    border-radius: 25px; /* You can adjust the value to control the roundness of the corners */
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: white;
+     border: 2px solid #0056b3; /* Add a border with a color of your choice */
+    cursor: pointer;
+}
+
+#copyButton:hover {
+    background-color: #0056b3;
+}
+
+#returnButton {
+    border-radius: 25px; /* You can adjust the value to control the roundness of the corners */
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: white;
+     border: 2px solid #0056b3; /* Add a border with a color of your choice */
+    cursor: pointer;
+    margin-left: auto;
+
+}
+
+#returnButton:hover {
+    background-color: #0056b3;
+}
+
+        
+        
 
     
-   
-
-
-
-
-
-  
 
     
 
-   
 
- 
-  
-   
+          
+            
 
-  
-      
-
- 
-
-   
-
-
-
-         
-    
-
-
- 

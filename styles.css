@@ -4,28 +4,26 @@ body {
     background-repeat: no-repeat; /* To prevent repeating the GIF */
     background-attachment: fixed; /* Keep the background fixed while scrolling */
     /* Other CSS properties for the body element */
-
 }
 
+#totalPrice, #requiredPrice, #budgetLeft {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+}
 
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-        #totalPrice, #requiredPrice, #budgetLeft {
-            font-family: 'Roboto Slab', sans-serif;
-            font-weight: bold;
-        }
+.blink {
+    animation: blink 1s infinite;
+}
 
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .blink {
-            animation: blink 1s infinite;
-        }
-        
-   /* Add styles for the selected players container */
-    .selected-players-container {
+.selected-players-container,
+.game-list-container {
+    /* Your existing styles for these containers */
     border: 2px solid #007BFF;
     padding: 10px;
     margin-top: 20px;
@@ -33,28 +31,54 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     max-width: 300px;
-
- }
-
-    .selected-players-container h2 {
-    font-size: 18px;
-   margin-bottom: 10px;
-    
+    background-color: #111;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 10px;
+    display: inline-block;
 }
 
-   .selected-players-container ul {
+.game-list-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.selected-players-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.selected-players-container ul {
     list-style: none;
     padding: 0;
 }
 
-  .selected-players-container li {
+.game-list-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.selected-players-container li {
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between; /* Align elements with space in between */
     align-items: center;
 }
 
-   .selected-players-container span {
+.game-list-container li {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between; /* Align elements with space in between */
+    align-items: center;
+}
+
+.selected-players-container span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.game-list-container span {
     font-weight: bold;
     margin-right: 5px;
 }
@@ -76,7 +100,7 @@ body a:hover, body button:hover {
     text-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Increase the intensity of the glowing border */
     color: #00bfff; /* Change text color on hover (e.g., to a bright blue) */
 }
-  
+
 /* Circular design for position label */
 .position-circle {
     display: inline-block;
@@ -92,9 +116,6 @@ body a:hover, body button:hover {
     font-weight: bold;
     font-size: 12px; /* Adjust the font size */
 }
-
-
-
 
 /* Modify the styles for the "Your Lineup" header */
 .selected-players-container h2 {
@@ -118,6 +139,27 @@ body a:hover, body button:hover {
     animation: glow 2s infinite; /* Apply the glowing animation */
 }
 
+.game-list-container h2 {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white for contrast */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center the text horizontally */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.game-list-container h2::before {
+    content: ""; /* Add a pseudo-element for the glowing border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #9400D3; /* Set the border color to a bright blue */
+    border-radius: 5px; /* Add rounded corners */
+    opacity: 0; /* Initially make it transparent */
+    animation: glow 2s infinite; /* Apply the glowing animation */
+}
+
 @keyframes glow {
     10% {
         opacity: 0.2; /* Initial opacity */
@@ -131,14 +173,6 @@ body a:hover, body button:hover {
         opacity: 0.2; /* Back to initial opacity */
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Back to initial box-shadow */
     }
-}
-
-.selected-players-container {
-    background-color: #111; /* Dark gray background for displays */
-    border: 1px solid #444; /* Add a border for separation */
-    border-radius: 5px; /* Add rounded corners */
-    margin: 20px 0; /* Add margin for spacing between displays */
-    padding: 10px; /* Add padding for content spacing */
 }
 
 .selected-players-container button {
@@ -166,54 +200,53 @@ body button:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase the box-shadow on hover for a lift effect */
 }
 
-
 /* Style for the copy button */
 button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 .navigation-menu {
-            background-color: white;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            z-index: 2;
-        }
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
 
 /* Style for the navigation links */
-        .navigation-menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-        }
+.navigation-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
 
-        .navigation-menu li {
-            display: inline;
-            margin-right: 20px;
-        }
-        .navigation-menu a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 18px;
-        }
+.navigation-menu li {
+    display: inline;
+    margin-right: 20px;
+}
 
-        /* Adjust the spacing for the content below the menu */
-        body {
-            padding-top: 70px;
-        }
+.navigation-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
 
+/* Adjust the spacing for the content below the menu */
+body {
+    padding-top: 70px;
+}
 
-        /* Add styles for the dropdown container */
+/* Add styles for the dropdown container */
 .dropdown-container {
     display: flex;
     flex-direction: column;
@@ -226,8 +259,6 @@ label {
 }
 
 /* Style the select elements */
-
-
 /* Style the select elements on hover */
 select:hover {
     border-color: #007BFF;
@@ -254,7 +285,6 @@ select {
     margin-top: 20px; /* Add margin for spacing */
 }
 
-
 .sg-circle {
     display: inline-block;
     width: 24px;
@@ -270,30 +300,28 @@ select {
     font-size: 12px;
 }
 
-
-
 /* Add this to your existing CSS or styles.css file */
 .success-box {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #007BFF;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  z-index: 9999;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 9999;
 }
 
 .success-box p {
-  margin: 0;
+    margin: 0;
 }
 
 .success-box.show {
-  display: block;
+    display: block;
 }
 
 /* Style the select elements with a light background color */
@@ -317,69 +345,12 @@ select option {
     /* Add any other desired styles here */
 }
 
-/* Add this to your styles.css file */
-.game-list-container {
-    height: 200px; /* Set a fixed height as needed */
-    overflow-y: auto; /* Add a scrollbar when content exceeds the height */
-}
-
-
-
-  .game-list-container h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    
-}
-
-   .game-list-container ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Modify the styles for the "Your Lineup" header */
-.games-list-container h2 {
-    background-color: #000; /* Set the background color to black */
-    color: #fff; /* Set the text color to white for contrast */
-    padding: 10px; /* Add some padding for spacing */
-    text-align: center; /* Center the text horizontally */
-    position: relative; /* Position relative for pseudo-element */
-}
-
-.games-list-container h2::before {
-    content: ""; /* Add a pseudo-element for the glowing border */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid #00bfff; /* Set the border color to a bright blue */
-    border-radius: 5px; /* Add rounded corners */
-    opacity: 0; /* Initially make it transparent */
-    animation: glow 2s infinite; /* Apply the glowing animation */
-}
-.game-list-container span {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-/* Add this to your styles.css file */
-.game-list-container {
-    max-height: 200px; /* Adjust the maximum height as needed */
-    overflow-y: auto;
-    position: relative; /* Add relative positioning to the container */
-}
-
-.game-list-content {
-    max-height: calc(100% - 30px); /* Adjust the height to account for the header */
-    overflow-y: auto;
-}
-
 #copyButton {
     border-radius: 25px; /* You can adjust the value to control the roundness of the corners */
     padding: 10px 20px;
     background-color: #0074d9;
     color: white;
-     border: 2px solid #0056b3; /* Add a border with a color of your choice */
+    border: 2px solid #0056b3; /* Add a border with a color of your choice */
     cursor: pointer;
 }
 
@@ -392,24 +363,30 @@ select option {
     padding: 10px 20px;
     background-color: #0074d9;
     color: white;
-     border: 2px solid #0056b3; /* Add a border with a color of your choice */
+    border: 2px solid #0056b3; /* Add a border with a color of your choice */
     cursor: pointer;
     margin-left: auto;
-
 }
 
 #returnButton:hover {
     background-color: #0056b3;
 }
 
-        
-        
-
-    
-
-    
 
 
-          
-            
+.game-list-container {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 36%; /* Adjust the width to make it longer */
+    max-width: 280px;
+    text-align: center; /* Center the content horizontally */
+}
+/* Reset alignment for child elements */
 
+.game-list-container ul,
+.game-list-container li,
+.game-list-container span {
+    text-align: left; /* Reset text alignment for child elements */
+}

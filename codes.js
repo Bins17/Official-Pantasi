@@ -292,7 +292,6 @@ sfSelect.addEventListener("change", function() {
 
 
 
-    // Create and add the player to the selected players list
     addPlayerToSelectedList(sfName, false, true); // Pass true for isSF
     updateBudgetLeft();
     
@@ -460,13 +459,12 @@ function updateBudgetLeft() {
    budgetLeftElement.innerHTML = "Left: <span style='color: white; background-color: transparent; padding: 2px;'><span style='color: lightgreen;'>" + budgetLeft  + "k</span></span>";
 }
 
-// Sample game data (you can replace this with actual game data)
+
 const nbaGamesToday = [
-   //nba games
+   " Wait for the Regular season to start! ",   
 ];
 
 
-// Function to populate the game list
 function populateGameList() {
     const gameList = document.getElementById("gameList");
 
@@ -477,15 +475,14 @@ function populateGameList() {
     });
 }
 
-// Call the function to populate the game list
+
 populateGameList();
 
 // Function to update the lineup dynamically
 function updateLineup() {
-    // Replace this with your logic to update the lineup
-    // For example, you can update the "selectedPlayersList" and "totalPriceLineup" elements
 }
 
-// Call the function to update the lineup (whenever needed)
+
 updateLineup();
+
 

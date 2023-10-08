@@ -6,7 +6,7 @@
     <title>Pantasi Pros</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body>         
     <div class="navigation-menu">
         <ul>
             <li><a href="#" id="rules">Rules</a></li>
@@ -17,6 +17,8 @@
            
         </ul>
     </div>
+
+
 
 
     <label for="pgSelect">Point Guards</label>
@@ -90,7 +92,6 @@
 <div class="dropdown-container">
     <select id="cSelect">
         <option value="" disabled selected>Please select a Center</option>
-        <!-- Add more Centers here -->
         <option value="Nikola Jokic" data-price="90k">Nikola Jokic - 90k</option>
         <option value="Joel Embiid" data-price="84k">Joel Embiid - 84k</option>
         <option value="Anthony Davis" data-price="80k">Anthony Davis - 80k</option>
@@ -105,7 +106,7 @@
 
     
    <div id="selectedPlayersContainer" class="selected-players-container">
-    <h2>Make your best 5 Fantasy Lineup!</h2>
+    <h2>YOUR SELECTED PLAYERS</h2>
     <ul id="selectedPlayersList"></ul>
 
     <div class="price-info">
@@ -121,6 +122,10 @@
 </div>
 </div>
     
+   
+
+
+
 <div class="button-container">
 <button id="copyButton">Get Lineup</button>
     <button id="returnButton" onclick="goBack()">Back</button>
@@ -131,14 +136,44 @@
   <p id="success-message">Copied! Paste it on a chat/post.</p>
 </div>
 
+<div id="countdown-header">
+        2023-24 NBA SEASON BEGINS IN:
+    <div id="countdown">
+        <div id="countdown-container">
+            <div class="countdown-item">
+                <div class="countdown-box">
+                    <span id="days" class="countdown-time">0</span>
+                    <span class="countdown-label">D</span>
+                </div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-box">
+                    <span id="hours" class="countdown-time">0</span>
+                    <span class="countdown-label">H</span>
+                </div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-box">
+                    <span id="minutes" class="countdown-time">0</span>
+                    <span class="countdown-label">M</span>
+                </div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-box">
+                    <span id="seconds" class="countdown-time">0</span>
+                    <span class="countdown-label">S</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 <script src="codes.js"></script>
 </body>
 </html>
 
 
         
+  
     
-    
-    
-   
-       

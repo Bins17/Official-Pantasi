@@ -377,7 +377,7 @@ select option {
 .game-list-container {
     position: absolute;
     top: 70%;
-    left: 40%;
+    left: 73%;
     transform: translate(-50%, -50%);
     width: 36%; /* Adjust the width to make it longer */
     max-width: 280px;

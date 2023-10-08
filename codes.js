@@ -461,6 +461,7 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
+    "No Games Available",
    " Wait for the Regular season to start! ",   
 ];
 
@@ -484,5 +485,38 @@ function updateLineup() {
 
 
 updateLineup();
+
+function updateCountdown() {
+            const targetDate = new Date('2023-10-25T07:30:00');
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Calculate time remaining
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown timer
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(interval);
+                document.getElementById("days").textContent = "EXPIRED";
+                document.getElementById("hours").textContent = "";
+                document.getElementById("minutes").textContent = "";
+                document.getElementById("seconds").textContent = "";
+            }
+        }
+
+        // Update the countdown every second
+        const interval = setInterval(updateCountdown, 1000);
+
+        // Initial update
+        updateCountdown();
 
 

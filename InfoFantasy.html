@@ -3,123 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quadro Player Info</title>
+    <title>List of Champions</title>
     <style>
 
+      
         body {
-    background-image: url('RealGM Forums.gif');
-    background-size: cover; /* Use the original size of the GIF */
-    background-repeat: no-repeat; /* To prevent repeating the GIF */
-    background-attachment: fixed; /* Keep the background fixed while scrolling */
-    /* Other CSS properties for the body element */
+            font-family: Arial, sans-serif;
+           background-color:hsla(0,100%,50%,0.5);
+            margin: 0;
+            padding: 0;
+        }
 
-}
-        /* Add styling for the folders and items */
-        .folders-container {
+        .player-container {
+            width: 180px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            margin: 20px;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .team-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .player-description {
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        .team-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .back-button {
+            position: absolute;
+            bottom: 30px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 22px; 
+        }
+       
+       .player-containers-wrapper {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
         }
 
-        .folder {
-            width: 200px;
-            height: 200px;
-            margin: 10px;
-            perspective: 1000px; /* Add perspective for 3D effect ,1000px*/
-        }
-
-        .folder-flip {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
-        }
-
-        .folder:hover .folder-flip {
-            transform: rotateY(180deg); /* Flip the folder on hover */
-        }
-
-        .front, .back {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-        }
-
-        .front {
-            background: black;
-            border: 10px solid #0074d9;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-
-        .back {
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transform: rotateY(180deg); /* Rotate the back to the other side */
-            font-size: 12px; /* Adjust font size */
-            line-height: 1.2; /* Adjust line height */
-        }
-
-        /* Style for the person's image */
-        .person-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px; /* Adjust the border-radius to match the folder */
+         hr {
+            border: none;
+            border-top: 4px solid #000; 
+            margin: 20px 0; 
         }
     </style>
 </head>
 <body>
-    <!-- Create folders for each person -->
-    <div class="folders-container">
-        <div class="folder">
-            <div class="folder-flip">
-                <div class="front">
-                    <button onclick="showInfo('person1')">Show</button>
-                    <img class="person-image" src="Curry.jpg" alt="Person 1">
-                </div>
-                <div class="back" id="person1">
-                    <p>Stephen Curry</p>
-                    <p>lnsadbhkekbhv</p>
-                    <p>jnadfnerrnl</p>
-                    <p>mdksm.afs,</p>
-                    <p>nadmkds</p>
-                    <p>mkvdmkmrkd</p>
-                    <p>kajkadsnknjcs</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Rest of your folders and content -->
-
-       <div class="folder">
-            <div class="folder-flip">
-                <div class="front">
-                    <button onclick="showInfo('person2')">Show</button>
-                    <img class="person-image" src="Nikola_Jokic.jpg" alt="Person 2">
-                </div>
-                <div class="back" id="person2">
-                    <p>Nikola Jokic</p>
-                    <p>nqlewbkadkk</p>
-                    <p>uqoBIAWEJWRNJQE</p>
-                </div>
-            </div>
-        </div>
+    <hr> </hr>
+    <h1>LIST OF FANTASY CHAMPIONS</h1>
+    <hr> </hr>
+    <a class="back-button" href="index.html">BACK</a>
+    <div class="player-container">
+        <img class="team-image" src="defaultFantasyPic.jpg" alt="pic1">
+        <div class="team-title">S1 Trio Cup Champions </div>
+        <h1> Team Ben </h1>
+        <div class="player-description">Ben, Christian, Bryan</div>
     </div>
 
-    <script>
-        // JavaScript function to show the information in a modal
-        function showInfo(personId) {
-            var infoContent = document.getElementById(personId);
-            infoContent.style.display = 'block';
-        }
-    </script>
+    <div class="player-container">
+        <img class="team-image" src="defaultFantasyPic.jpg" alt="pic2">
+        <div class="team-title">S1 Duo Cup Champions</div>
+        <h2> CFG Thunders</h2>
+        <div class="player-description">Gerome, Carlo</div>
+    </div>
+
+     <div class="player-container">
+        <img class="team-image" src="defaultFantasyPic.jpg" alt="pic3">
+        <div class="team-title">S2 Trio Cup Champions</div>
+        <h2> Team Ben</h2>
+        <div class="player-description">Ben, Christian, Bryan</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="defaultFantasyPic.jpg" alt="pick4">
+        <div class="team-title">S2 Duo Cup Champions</div>
+        <h2> BM Heat</h2>
+        <div class="player-description">Vince, Maybelle</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="defaultFantasyPic.jpg" alt="pic5">
+        <div class="team-title">S3 Trio Cup Champions</div>
+        <h2> Team Vic</h2>
+        <div class="player-description">Vic, David, James</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="DVSuns.jpg" alt="pic6">
+        <div class="team-title">S3 Duo Cup Champions</div>
+        <h2> DV Suns</h2>
+        <div class="player-description">Dale, Vic</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="SoloCupChamp.jpg" alt="pic7">
+        <div class="team-title">S3 Solo Cup Champion</div>
+        <h2> Vince Mejico</h2>
+        <br>
+        <div class="player-description">Vince</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="S4TrioChamp.jpg" alt="pic8">
+        <br>
+        <div class="team-title">S4 Trio Cup Champions</div>
+        <h2> Team Gerome</h2>
+        <br>
+            <br>
+        <div class="player-description">Gerome, Jhin, Bryan</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="S4DuoChamp.jpg" alt="pic9">
+        <div class="team-title">S4 Duo Cup Champions</div>
+        <h2> JB Pacers</h2>
+        <div class="player-description">Jhin, Vince</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="S4SoloChamp.jpg" alt="pic9">
+        <br>
+        <br>
+        <div class="team-title">S4 Solo Cup Champion</div>
+        <h2> Gerome Delfin</h2>
+        <br>
+        <br>
+        <div class="player-description">Gerome</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="S5TrioChamp.jpg" alt="pic9">
+        <br>
+        <br>
+        <div class="team-title">S5 Trio Cup Champions</div>
+        <h2> Team Gerome</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="player-description">Gerome, Jhin, Bryan</div>
+    </div>
+
+     <div class="player-container">
+        <img class="team-image" src="S5DuoChamp.jpg" alt="pic9">
+        <br>
+        <br>
+        <div class="team-title">S5 Duo Cup Champions</div>
+        <h2> AG Blazers</h2>
+        <div class="player-description">Gerome, Andrei</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="S5SoloChamp.jpg" alt="pic9" style="height: 160px; overflow: hidden;">
+        <div class="team-title">S5 Solo Cup Champion</div>
+        <h2> Minmar Dejesica</h2>
+        <div class="player-description">Minmar</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="S6TrioChamp.jpg" alt="pic11" style="height: 160px; overflow: hidden;">
+        <br>
+        <div class="team-title">S6 Trio Cup Champions</div>
+        <h2> Team Minmar</h2>
+        <br>
+        <div class="player-description">Minmar, Gerome, Joriel</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="S6QuadroChamp.jpg" alt="pic11" style="height: 160px; overflow: hidden;">
+        <br>
+        <div class="team-title">S6 Quadro Cup Champions</div>
+        <h2> Worst Generation</h2>
+        <div class="player-description">Ridley, James, Paolo, Joriel</div>
+    </div>
+
+    <div class="player-container">
+        <img class="team-image" src="S6DuoChamp.jpg" alt="pic11" style="height: 160px; overflow: hidden;">
+        <br>
+        <div class="team-title">S6 Duo Cup Champions</div>
+        <h2> BB Bucks</h2>
+        <div class="player-description">Vince, Bryan</div>
+    </div>
+
+        <div class="player-container">
+        <img class="team-image" src="S7TrioChamp.jpg" alt="pic11" style="height: 160px; overflow: hidden;">
+        <br>
+        <div class="team-title">S7 Trio Cup Champions</div>
+        <h2> Team Ren</h2>
+        <div class="player-description">Ren, Jeff, Von</div>
+    </div>
 </body>
 </html>
+
+         
+                   

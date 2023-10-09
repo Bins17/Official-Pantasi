@@ -3,64 +3,107 @@
 <head>
     <title>PantaSite</title>
     <style>
-        /* Center the container div */
+        
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-image: url(nbaPlayersBackground.jpg);
             background-size: cover;
         }
-        /* Style for the button */
+
+        
+        .content-wrapper {
+            margin-top: 280px; 
+            text-align: center;
+        }
+
         .button-container {
             text-align: center;
         }
 
         button {
-            background-color: violet; /* Updated button background color */
+            background-color: violet; 
             color: white;
-            border: none; /* Removed border to emphasize the 3D effect */
+            border: none; 
             padding: 20px 50px;
             text-align: center;
-            /* Removed text-decoration: blink; as it's not a valid CSS property */
+            
             display: inline-block;
             font-size: 30px;
             cursor: pointer;
             border-radius: 5px;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Added box-shadow for the 3D effect */
-            transition: transform 0.2s ease; /* Smooth button transformation on hover */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); 
+            transition: transform 0.2s ease; 
         }
 
         button:hover {
-            transform: translateY(6px); /* Add a subtle lift effect on hover */
+            transform: translateY(6px); 
         }
+
+        .update-container {
+            background-image: url(kakashi.gif); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white; 
+
+
+            border: 1px solid #ccc; 
+            padding: 10px;
+            max-width: 600px; 
+            text-align: left; 
+            margin-top: 80px; 
+            font-size: 18px; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+         .update-container h2 {
+        color: #FF8888; 
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+
+    .update-container ul li {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
     </style>
 </head>
 <body>
-    <!-- Container div to center the button -->
-    <div class="button-container">
-        <!-- Adding a button with styling -->
-        <button onClick="redirectToViewTeams()">SET LINEUP</button>
-        <button onClick="redirectToCalcu()">FANTASY CALCULATOR</button>
-        <button onClick="redirectToViewRecord()">VIEW RECORDS</button>
+   
+    <div class="content-wrapper">
+        <div class="button-container">
+            <!-- Adding a button with styling -->
+            <button onClick="redirectToViewTeams()">SET LINEUP</button>
+            <button onClick="redirectToCalcu()">FANTASY CALCULATOR</button>
+            <button onClick="redirectToViewRecord()">VIEW RECORDS</button>
+        </div>
+        <div class="update-container">
+            <h2>UPDATES</h2>
+            <ul>
+                <li><strong>Oct 9:</strong> Added list of Fantasy Champions History to "View Records"</strong> </li>
+                <li><strong>Oct 8:</strong> Added a countdown timer for the NBA Opening Day Game</li>
+                <li><strong>Oct 7:</strong> Changed the stilled-image backgrounds, to moving backgrounds</li>
+                <hr> </hr>
+                <li><strong>Note:</strong> Masmaganda view ng website sa Desktop/Laptop kesa sa Phone view</li>
+            </ul>
+        </div>
     </div>
 
     <script>
-     function redirectToCalcu() {
-        window.location.href = 'FantasyCalcu.html';
-    }
+        function redirectToCalcu() {
+            window.location.href = 'FantasyCalcu.html';
+        }
 
-     function redirectToViewTeams() {
-        window.location.href = 'ViewNBAteams.html';
-     }
+        function redirectToViewTeams() {
+            window.location.href = 'ViewNBAteams.html';
+        }
 
-     function redirectToViewRecord() {
-        window.location.href = 'InfoFantasy.html';
-     }
+        function redirectToViewRecord() {
+            window.location.href = 'InfoFantasy.html';
+        }
     </script>
 </body>
 </html>
 
-       

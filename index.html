@@ -17,20 +17,8 @@
         }
 
         
-        @media (max-width: 768px) {
-    /* Media query for screens with a maximum width of 768px (typical phones) */
-    body {
-        background-size: contain; /* Use 'contain' to fit the background within the viewport */
-        background-attachment: scroll; /* Allow the background to scroll with the content */
-    }
-
-    .update-container {
-        margin-top: 40px; /* Reduce margin for smaller screens */
-        max-width: 90%; /* Make the container slightly narrower on small screens */
-    }
-}
         .content-wrapper {
-            margin-top:280px; 
+            margin-top: 280px; 
             text-align: center;
         }
 
@@ -81,6 +69,22 @@
 
     .update-container ul li {
         text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+
+    .message-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 9999;
+}
+
     </style>
 </head>
 <body>
@@ -91,11 +95,12 @@
             <button onClick="redirectToViewTeams()">SET LINEUP</button>
             <button onClick="redirectToCalcu()">FANTASY CALCULATOR</button>
             <button onClick="redirectToViewRecord()">VIEW RECORDS</button>
+            <button onClick="redirectToViewStats()">VIEW STATS</button>
+            
         </div>
         <div class="update-container">
             <h2>UPDATES</h2>
             <ul>
-                <hr> </hr>
                 <li><strong>Oct 9:</strong> Added list of Fantasy Champions History to "View Records"</strong> </li>
                 <li><strong>Oct 8:</strong> Added a countdown timer for the NBA Opening Day Game</li>
                 <li><strong>Oct 7:</strong> Changed the stilled-image backgrounds, to moving backgrounds</li>
@@ -104,9 +109,18 @@
         </div>
     </div>
 
+    <div id="message-box" class="message-box">
+    <p id="message-text"></p>
+</div>
+
+
     <script>
         function redirectToCalcu() {
-            window.location.href = 'FantasyCalcu.html';
+            // Show the message box with the message "currently unavailable!"
+    showMessage("Fantasy Calculator is Currently Unavailable!, Underwork...");
+
+    // After 3 seconds, hide the message box
+    setTimeout(hideMessage, 3000);
         }
 
         function redirectToViewTeams() {
@@ -116,11 +130,36 @@
         function redirectToViewRecord() {
             window.location.href = 'InfoFantasy.html';
         }
+
+        function redirectToViewStats() {
+    // Show the message box with the message "currently unavailable!"
+    showMessage("View Stats is Currently Unavailable!, Underwork...");
+
+    // After 3 seconds, hide the message box
+    setTimeout(hideMessage, 3000);
+}
+
+function showMessage(message) {
+    var messageBox = document.getElementById("message-box");
+    var messageText = document.getElementById("message-text");
+
+    messageText.textContent = message;
+    messageBox.style.display = "block";
+}
+
+function hideMessage() {
+    var messageBox = document.getElementById("message-box");
+    messageBox.style.display = "none";
+}
     </script>
 </body>
 </html>
 
            
+
+
             
+    
+     
 
    

@@ -13,11 +13,24 @@
             margin: 0;
             background-image: url(nbaPlayersBackground.jpg);
             background-size: cover;
+            background-attachment: fixed;
         }
 
         
+        @media (max-width: 768px) {
+    /* Media query for screens with a maximum width of 768px (typical phones) */
+    body {
+        background-size: contain; /* Use 'contain' to fit the background within the viewport */
+        background-attachment: scroll; /* Allow the background to scroll with the content */
+    }
+
+    .update-container {
+        margin-top: 40px; /* Reduce margin for smaller screens */
+        max-width: 90%; /* Make the container slightly narrower on small screens */
+    }
+}
         .content-wrapper {
-            margin-top: 280px; 
+            margin-top:280px; 
             text-align: center;
         }
 
@@ -82,11 +95,11 @@
         <div class="update-container">
             <h2>UPDATES</h2>
             <ul>
+                <hr> </hr>
                 <li><strong>Oct 9:</strong> Added list of Fantasy Champions History to "View Records"</strong> </li>
                 <li><strong>Oct 8:</strong> Added a countdown timer for the NBA Opening Day Game</li>
                 <li><strong>Oct 7:</strong> Changed the stilled-image backgrounds, to moving backgrounds</li>
                 <hr> </hr>
-                <li><strong>Note:</strong> Masmaganda view ng website sa Desktop/Laptop kesa sa Phone view</li>
             </ul>
         </div>
     </div>
@@ -107,3 +120,7 @@
 </body>
 </html>
 
+           
+            
+
+   

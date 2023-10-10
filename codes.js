@@ -518,4 +518,3 @@ function updateCountdown() {
 
         // Initial update
         updateCountdown();
-

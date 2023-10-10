@@ -519,4 +519,20 @@ function updateCountdown() {
         // Initial update
         updateCountdown();
 
+function updateViewerCount() {
+            fetch('ViewerCount.php')
+                .then(response => response.json())
+                .then(data => {
+                    const viewerCountElement = document.getElementById('viewer-count');
+                    viewerCountElement.textContent = data.viewer_count;
+                })
+                .catch(error => {
+                    console.error('Error fetching viewer count:', error);
+                });
+        }
+
+        // Update the viewer count initially and refresh it periodically (e.g., every 5 seconds)
+        updateViewerCount();
+        setInterval(updateViewerCount, 5000);
+
 

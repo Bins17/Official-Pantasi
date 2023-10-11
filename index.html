@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>PantaSite</title>
     <style>
-        
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
+            margin: 10px;
             background-image: url(nbaPlayersBackground.jpg);
             background-size: cover;
             background-attachment: fixed;
         }
 
-        
-        .content-wrapper {
-            margin-top: 280px; 
+        .navbar {
+            background-color: #ADD8E6;;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            width: 90%;
+            
+            border-radius: 80px;
+        }
+
+        .navbar a {
+        font-family: Arial, sans-serif; 
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+        .card-wrapper {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            max-width: 800px;
             text-align: center;
+            margin-top: 20px;
+            height: 300px;
+        }
+
+        .content-wrapper {
+            margin-top: 10px;
         }
 
         .button-container {
@@ -27,100 +56,110 @@
         }
 
         button {
-            background-color: violet; 
-            color: white;
-            border: none; 
-            padding: 20px 50px;
+            margin: 10px;
+            background-color: #ADD8E6;
+            color: #000;
+            border: none;
+            padding: 20px 40px;
             text-align: center;
-            
             display: inline-block;
-            font-size: 30px;
+            font-size: 24px;
+            font-weight: bold;
             cursor: pointer;
-            border-radius: 5px;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); 
-            transition: transform 0.2s ease; 
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease;
         }
 
         button:hover {
-            transform: translateY(6px); 
+            transform: translateY(6px);
         }
 
         .update-container {
-            background-image: url(kakashi.gif); 
+            background-image: url(kakashi.gif);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            color: white; 
-
-
-            border: 1px solid #ccc; 
+            color: white;
+            border: 1px solid #ccc;
             padding: 10px;
-            max-width: 600px; 
-            text-align: left; 
-            margin-top: 80px; 
-            font-size: 18px; 
+            max-width: 600px;
+            text-align: left;
+            margin-top: 100px;
+            font-size: 18px;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-         .update-container h2 {
-        color: #FF8888; 
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    }
+        .update-container h2 {
+            color: #FF8888;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        }
 
-    .update-container ul li {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    }
+        .update-container ul li {
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        }
 
-    .message-box {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    z-index: 9999;
-}
+        .message-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            z-index: 9999;
+        }
 
+        .card-wrapper h1 {
+           font-family: 'Roboto Slab', sans-serif;
+        }
     </style>
 </head>
+
 <body>
-   
+
+    <div class="navbar">
+        <a href="#">Schedule/Standings</a>
+        <a href="#">Rules</a>
+        <a href="#">Pay Entrance</a>
+        <a href="#">Facebook Group</a>
+    </div>
+
     <div class="content-wrapper">
-        <div class="button-container">
-            <!-- Adding a button with styling -->
-            <button onClick="redirectToViewTeams()">SET LINEUP</button>
-            <button onClick="redirectToCalcu()">FANTASY CALCULATOR</button>
-            <button onClick="redirectToViewRecord()">VIEW RECORDS</button>
-            <button onClick="redirectToViewStats()">VIEW STATS</button>
-            
+        <div class="card-wrapper">
+            <h1>NBA PANTASI SEASON 8</h1>
+            <div class="button-container">
+                <!-- Adding buttons with styling -->
+                <button onClick="redirectToViewTeams()">SET LINEUP</button>
+                <button onClick="redirectToCalcu()">FANTASY CALCULATOR</button>
+                <button onClick="redirectToViewRecord()">VIEW RECORDS</button>
+                <button onClick="redirectToViewStats()">VIEW STATS</button>
+            </div>
         </div>
         <div class="update-container">
             <h2>UPDATES</h2>
             <ul>
-                <li><strong>Oct 9:</strong> Added list of Fantasy Champions History to "View Records"</strong> </li>
+                <li><strong>Oct 9:</strong> Added list of Fantasy Champions History to "View Records"</li>
                 <li><strong>Oct 8:</strong> Added a countdown timer for the NBA Opening Day Game</li>
-                <li><strong>Oct 7:</strong> Changed the stilled-image backgrounds, to moving backgrounds</li>
-                <hr> </hr>
+                <li><strong>Oct 7:</strong> Changed the stilled-image backgrounds to moving backgrounds</li>
+                <hr></hr>
             </ul>
         </div>
     </div>
 
     <div id="message-box" class="message-box">
-    <p id="message-text"></p>
-</div>
-
+        <p id="message-text"></p>
+    </div>
 
     <script>
         function redirectToCalcu() {
-            // Show the message box with the message "currently unavailable!"
-    showMessage("Fantasy Calculator is Currently Unavailable!, Underwork...");
+            showMessage("Fantasy Calculator is Currently Unavailable!, Underwork...");
 
-    // After 3 seconds, hide the message box
-    setTimeout(hideMessage, 3000);
+            // After 3 seconds, hide the message box
+            setTimeout(hideMessage, 3000);
         }
 
         function redirectToViewTeams() {
@@ -132,25 +171,25 @@
         }
 
         function redirectToViewStats() {
-    // Show the message box with the message "currently unavailable!"
-    showMessage("View Stats is Currently Unavailable!, Underwork...");
+            
+            showMessage("View Stats is Currently Unavailable!, Underwork...");
 
-    // After 3 seconds, hide the message box
-    setTimeout(hideMessage, 3000);
-}
+            setTimeout(hideMessage, 3000);
+        }
 
-function showMessage(message) {
-    var messageBox = document.getElementById("message-box");
-    var messageText = document.getElementById("message-text");
+        function showMessage(message) {
+            var messageBox = document.getElementById("message-box");
+            var messageText = document.getElementById("message-text");
 
-    messageText.textContent = message;
-    messageBox.style.display = "block";
-}
+            messageText.textContent = message;
+            messageBox.style.display = "block";
+        }
 
-function hideMessage() {
-    var messageBox = document.getElementById("message-box");
-    messageBox.style.display = "none";
-}
+        function hideMessage() {
+            var messageBox = document.getElementById("message-box");
+            messageBox.style.display = "none";
+        }
     </script>
 </body>
+
 </html>

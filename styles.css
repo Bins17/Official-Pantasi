@@ -1,9 +1,9 @@
 body {
     background-image: url('Steph.gif');
-    background-size: cover; /* Use the original size of the GIF */
-    background-repeat: no-repeat; /* To prevent repeating the GIF */
-    background-attachment: fixed; /* Keep the background fixed while scrolling */
-    /* Other CSS properties for the body element */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+
 }
 
 #totalPrice, #requiredPrice, #budgetLeft {
@@ -47,7 +47,7 @@ body {
 .selected-players-container h2 {
     font-size: 18px;
     margin-bottom: 10px;
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Georgia';
 }
 
 .selected-players-container ul {
@@ -177,15 +177,15 @@ body a:hover, body button:hover {
 }
 
 .selected-players-container button {
-    color: #000; /* Set text color to black for remove buttons */
+    color: #000; 
 }
 
 /* Modify the button styles to make them appear 3D */
 body button {
     text-decoration: none;
     color: #fff; /* Default text color */
-    background-color: #007BFF; /* Button background color */
-    border: 1px solid #0056b3; /* Darker border color */
+    background-color: #007BFF;
+    border: 1px solid #0056b3; 
     padding: 5px 10px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Add smooth transitions */
@@ -198,7 +198,7 @@ body button:hover {
     background-color: #0056b3; /* Darker blue on hover */
     color: #fff; /* White text on hover */
     transform: translateY(-2px); /* Move the button up slightly on hover for a 3D effect */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase the box-shadow on hover for a lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Style for the copy button */
@@ -210,37 +210,6 @@ button {
     cursor: pointer;
 }
 
-.navigation-menu {
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-}
-
-/* Style for the navigation links */
-.navigation-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-.navigation-menu li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.navigation-menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-}
 
 /* Adjust the spacing for the content below the menu */
 body {
@@ -301,19 +270,17 @@ select {
     font-size: 12px;
 }
 
-/* Add this to your existing CSS or styles.css file */
 .success-box {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    text-align: center;
     z-index: 9999;
 }
 
@@ -377,12 +344,12 @@ select option {
 
 .game-list-container {
     position: absolute;
-    top: 70%;
+    top: 90%;
     left: 73%;
     transform: translate(-50%, -50%);
-    width: 36%; /* Adjust the width to make it longer */
+    width: 36%; 
     max-width: 280px;
-    text-align: center; /* Center the content horizontally */
+    text-align: center; 
     font-family: 'impact', sans-serif;
 }
 /* Reset alignment for child elements */
@@ -398,23 +365,24 @@ select option {
             font-weight: bold;
             text-align: center;
             margin-top: 20px;
+            margin-bottom: 20px;
             color: #fff;
             font-family: 'Goudy Bookletter 1911', sans-serif;
         }
 
         #countdown-header {
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 'Georgia';
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
          color: #000; /* Set the text color to black */
-         font-family: 'bradley hand', cursive;
         }
 
         #countdown-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 10px;
         }
 
         .countdown-item {
@@ -439,3 +407,6 @@ select option {
             font-size: 16px;
         }
 
+ 
+
+        

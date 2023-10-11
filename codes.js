@@ -1,4 +1,4 @@
-var copyButton = document.getElementById("copyButton");
+ar copyButton = document.getElementById("copyButton");
 
         var selectedPlayersPG = [];
         var selectedPlayersSG = [];

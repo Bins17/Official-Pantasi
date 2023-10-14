@@ -10,43 +10,29 @@
     <button id="get-fantasy-points">Get Fantasy Points</button>
     <div id="result"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/oauth-1.0a/1.0.1/oauth-1.0a.js"></script>
-
     <script>
         document.getElementById('get-fantasy-points').addEventListener('click', function () {
             const playerName = document.getElementById('player-name').value;
 
-            // Replace with your Yahoo API key and API secret
-            const consumerKey = 'dj0yJmk9OUZWblo1OE1wZk5iJmQ9WVdrOU1XOHlja1ZQWm00bWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTlj';
-            const consumerSecret = '0adff39859233154b327ec3e8d0c3e47bd2a1cac';
+            const apiKey = 'dj0yJmk9OUZWblo1OE1wZk5iJmQ9WVdrOU1XOHlja1ZQWm00bWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTlj'; // Replace with your Yahoo API key
+            const apiSecret = '0adff39859233154b327ec3e8d0c3e47bd2a1cac'; // Replace with your Yahoo API secret
 
             // Construct the API URL
             const apiUrl = `https://fantasysports.yahooapis.com/fantasy/v2/players;player_keys=nba.p.${playerName}/stats`;
 
-            // Generate OAuth headers
-            const oauth = OAuth({
-                consumer: {
-                    key: consumerKey,
-                    secret: consumerSecret,
-                },
-                signature_method: 'HMAC-SHA1',
-                hash_function(base_string, key) {
-                    return CryptoJS.HmacSHA1(base_string, key).toString(CryptoJS.enc.Base64);
-                },
-            });
+            // Generate a timestamp and nonce
+            const timestamp = Math.floor(Date.now() / 1000);
+            const nonce = Math.random().toString(36).substring(2);
 
-            const request_data = {
-                url: apiUrl,
-                method: 'GET',
-            };
-
-            const headers = oauth.toHeader(oauth.authorize(request_data));
+            // Create the OAuth 1.0a signature
+            const signature = generateSignature(apiUrl, apiKey, apiSecret, timestamp, nonce);
 
             // Make a request to the Yahoo Fantasy Sports API
             fetch(apiUrl, {
                 method: 'GET',
-                headers: headers,
+                headers: {
+                    'Authorization': `OAuth oauth_consumer_key="${apiKey}", oauth_nonce="${nonce}", oauth_signature="${signature}", oauth_signature_method="HMAC-SHA1", oauth_timestamp="${timestamp}"`,
+                }
             })
             .then(response => response.json())
             .then(data => {
@@ -59,7 +45,18 @@
                 document.getElementById('result').innerHTML = 'Error fetching data. Please check the player name or API credentials.';
             });
         });
+
+        function generateSignature(url, apiKey, apiSecret, timestamp, nonce) {
+            // Implement your OAuth 1.0a signature generation logic here
+            // You'll need to follow the OAuth 1.0a protocol to create the signature.
+            // It involves creating a base string, signing it with the API secret, and encoding it.
+            // There are libraries that can help with this, or you can implement it from scratch.
+            // Here's a simplified example:
+            return 'YOUR_GENERATED_SIGNATURE';
+        }
     </script>
 </body>
 </html>
 
+         
+             

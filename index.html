@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="ball3.png">
     <title>PantaSite</title>
     <style>
@@ -68,42 +70,44 @@
             margin-top: 20px;
         }
 
-        .button {
-            width: 250px;
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end; 
-            align-items: center;
-            background: black; 
-            color: #fff; 
-            border: 3px solid violet; 
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 15px;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, border 0.5s ease;
-            margin: 10px 0;
-        }
+      
+      .button {
+        width: 250px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background: linear-gradient(to bottom, #1e1e1e, #333);
+        color: #fff;
+        border: 3px solid violet;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 10px; 
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease, border 0.5s ease;
+        margin: 10px 0;
+    }
 
         .button:hover {
-            transform: translateY(6px);
-            border: 3px solid yellow;
-            animation: glow 1.5s infinite alternate; 
-        }
+        transform: translateY(6px);
+        border: 3px solid #ffbb00;
+        animation: glow 1.5s infinite alternate;
+    }
 
-        @keyframes glow {
-            from {
-                border-color: yellow;
-                box-shadow: 0 0 10px rgba(255, 255, 0, 0.7); 
-            }
-            to {
-                border-color: violet; 
-                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-            }
+    @keyframes glow {
+        from {
+            border-color: #ffbb00;
+            box-shadow: 0 0 10px rgba(255, 187, 0, 0.7);
         }
+        to {
+            border-color: #ffbb00;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+
 
         .button-image {
             width: 100%;
@@ -217,13 +221,20 @@
             menu.style.display = "none";
         }
     }
+
     </script>
 </body>
 </html>
 
 
-   
-  
+ 
+           
+           
+            
+            
+       
+         
+        
       
             
           

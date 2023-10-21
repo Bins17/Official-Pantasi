@@ -461,8 +461,8 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
-    "No Games Available",
-   " Wait for the Regular season to start! ",   
+    "Lakers @ Nuggets | 7:30am",
+   " Suns @ Warriors | 10:00am",   
 ];
 
 
@@ -518,4 +518,44 @@ function updateCountdown() {
 
         // Initial update
         updateCountdown();
+
+
+
+        const nbaGamesSecondDay = [
+    "Hawks @ Hornets 7:00am",
+    "Wizards @ Pacers 7:00am",
+    "Celtics @ Knicks 7:00am",
+    "Rockets @ Magic 7:00am",
+    "Timberwolves @ Raptors 7:30am",
+    "Pistons @ Heat 7:30am",
+    "Cavaliers @ Nets 7:30am",
+    "Pelicans @ Grizzlies 8:00am",
+    "Thunder @ Bulls 8:00am",
+    "Kings @ Jazz 9:00am",
+    "Mavericks @ Spurs 9:30am",
+    "Blazers @ Clippers 10:30am",
+    // Add more games as needed
+];
+
+function populateGameListSecondDay() {
+    const gameListSecondDay = document.getElementById("gameListSecondDay");
+
+    nbaGamesSecondDay.forEach((game) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = game;
+        gameListSecondDay.appendChild(listItem);
+    });
+}
+
+populateGameListSecondDay();
+
        
+       
+   
+
+
+
+
+
+
+

@@ -3,6 +3,8 @@ body {
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
+    margin-top: -60px;
+    margin-bottom: 260px;
 
 }
 
@@ -22,7 +24,7 @@ body {
 }
 
 .selected-players-container,
-.game-list-container {
+.game-list-container, .game-list-container2 {
     /* Your existing styles for these containers */
     border: 2px solid #007BFF;
     padding: 10px;
@@ -39,7 +41,7 @@ body {
     display: inline-block;
 }
 
-.game-list-container h2 {
+.game-list-container h2, .game-list-container2 h2 {
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -55,7 +57,7 @@ body {
     padding: 0;
 }
 
-.game-list-container ul {
+.game-list-container ul, .game-list-container2 ul {
     list-style: none;
     padding: 0;
 }
@@ -67,7 +69,7 @@ body {
     align-items: center;
 }
 
-.game-list-container li {
+.game-list-container li, .game-list-container2 li {
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between; /* Align elements with space in between */
@@ -79,7 +81,7 @@ body {
     margin-right: 5px;
 }
 
-.game-list-container span {
+.game-list-container span, .game-list-container2 span {
     font-weight: bold;
     margin-right: 5px;
 }
@@ -140,7 +142,7 @@ body a:hover, body button:hover {
     animation: glow 2s infinite; /* Apply the glowing animation */
 }
 
-.game-list-container h2 {
+.game-list-container h2, .game-list-container2 h2 {
     background-color: #000; /* Set the background color to black */
     color: #fff; /* Set the text color to white for contrast */
     padding: 10px; /* Add some padding for spacing */
@@ -148,7 +150,7 @@ body a:hover, body button:hover {
     position: relative; /* Position relative for pseudo-element */
 }
 
-.game-list-container h2::before {
+.game-list-container h2::before, .game-list-container2 h2::before {
     content: ""; /* Add a pseudo-element for the glowing border */
     position: absolute;
     top: 0;
@@ -314,51 +316,77 @@ select option {
 }
 
 #copyButton {
-    border-radius: 25px; /* You can adjust the value to control the roundness of the corners */
-    padding: 10px 20px;
-    background-color: #0074d9;
-    color: white;
-    border: 2px solid #0056b3; /* Add a border with a color of your choice */
+    border-radius: 25px;
+    padding: 20px 40px;
+    background-color:  #90EE90;
+    color: black;
+    font-weight: bold; 
+    font-family: 'Arial Black', sans-serif;
+    border: 2px solid #9400D3;
     cursor: pointer;
 }
 
 #copyButton:hover {
-    background-color: #0056b3;
+    background-color: #777; 
+    border: 2px solid #6B0082;
 }
 
 #returnButton {
-    border-radius: 25px; /* You can adjust the value to control the roundness of the corners */
-    padding: 10px 20px;
-    background-color: #0074d9;
-    color: white;
-    border: 2px solid #0056b3; /* Add a border with a color of your choice */
+    border-radius: 25px; 
+    padding: 20px 50px;
+    background-color:  #90EE90;
+    color: black;
+    font-weight: bold; 
+    font-family: 'Arial Black', sans-serif;
+    border: 2px solid #9400D3; 
     cursor: pointer;
-    margin-left: auto;
+    margin-left: 0;
+    position: absolute;
+    right: 1000px;
 }
 
 #returnButton:hover {
-    background-color: #0056b3;
+    background-color: #777;
+    border: 2px solid #6B0082;
 }
 
 
+/* modifying the positions of the 2 containers */
 
 .game-list-container {
     position: absolute;
-    top: 90%;
-    left: 73%;
+    top: 78%;
+    left: 45%;
     transform: translate(-50%, -50%);
     width: 36%; 
-    max-width: 280px;
+    max-width: 300px;
     text-align: center; 
-    font-family: 'impact', sans-serif;
+    font-family: 'Georgia';
 }
-/* Reset alignment for child elements */
+
+.game-list-container2 {
+      position: absolute;
+    top: 97%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 36%; 
+    max-width: 300px;
+    text-align: center; 
+    font-family: 'Georgia';
+}
 
 .game-list-container ul,
 .game-list-container li,
 .game-list-container span {
     text-align: left; /* Reset text alignment for child elements */
 }
+
+.game-list-container2 ul,
+.game-list-container2 li,
+.game-list-container2 span {
+    text-align: left; /* Reset text alignment for child elements */
+}
+
 
 #countdown {
             font-size: 36px;

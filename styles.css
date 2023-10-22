@@ -5,9 +5,6 @@ body {
     background-attachment: fixed; 
     margin-top: -60px;
     margin-bottom: 260px;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
 }
 
 #totalPrice, #requiredPrice, #budgetLeft {
@@ -440,22 +437,7 @@ select option {
             color: black;
         }
 
- @media (max-width: 900px) {
-            .game-list-container,
-            .game-list-container2 {
-                text-align: center;
-            }
-
-            .game-list-container h2,
-            .game-list-container2 h2 {
-                text-align: center;
-                font-size: 24px;
-            }
-        }
-
-
-
-
+ 
  
    
 

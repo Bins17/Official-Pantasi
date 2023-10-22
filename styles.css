@@ -374,7 +374,7 @@ select option {
         }
 
   select option[data-price] {
-            font-weight: bold; 
+           font-family: "Lucida Console", "Courier New", monospace;
             color: black;
         } 
 

@@ -5,7 +5,11 @@ body {
     background-attachment: fixed; 
     margin-bottom: 260px;
     margin-top: -60px;
+    background-color: #333;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Glowing black border for text */
 }
+
 
 #totalPrice, #requiredPrice, #budgetLeft {
     font-family: 'Roboto Slab', sans-serif;
@@ -24,7 +28,6 @@ body {
 
 .selected-players-container,
 .game-list-container, .game-list-container2 {
-    /* Your existing styles for these containers */
     border: 2px solid #007BFF;
     padding: 10px;
     margin-top: 20px;
@@ -40,58 +43,32 @@ body {
     display: inline-block;
 }
 
-.game-list-container h2, .game-list-container2 h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.selected-players-container h2 {
+.selected-players-container h2, .game-list-container h2, .game-list-container2 h2 {
     font-size: 18px;
     margin-bottom: 10px;
     font-family: 'Georgia';
 }
 
-.selected-players-container ul {
+.selected-players-container ul, .game-list-container ul, .game-list-container2 ul {
     list-style: none;
     padding: 0;
 }
 
-.game-list-container ul, .game-list-container2 ul {
-    list-style: none;
-    padding: 0;
-}
 
-.selected-players-container li {
+.selected-players-container li, .game-list-container li, .game-list-container2 li {
     margin-bottom: 5px;
     display: flex;
-    justify-content: space-between; /* Align elements with space in between */
+    justify-content: space-between; 
     align-items: center;
 }
 
-.game-list-container li, .game-list-container2 li {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between; /* Align elements with space in between */
-    align-items: center;
-}
 
-.selected-players-container span {
+.selected-players-container span, .game-list-container span, .game-list-container2 span {
     font-weight: bold;
     margin-right: 5px;
 }
 
-.game-list-container span, .game-list-container2 span {
-    font-weight: bold;
-    margin-right: 5px;
-}
 
-body {
-    background-color: #333;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Glowing black border for text */
-}
-
-/* Add a glowing black border on hover */
 body a, body button {
     text-decoration: none; /* Remove underline from links */
     color: #fff; /* Default text color */
@@ -165,23 +142,19 @@ body a:hover, body button:hover {
 @keyframes glow {
     10% {
         opacity: 0.2; /* Initial opacity */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a subtle box-shadow */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
     }
     70% {
         opacity: 0.8; /* Maximum opacity */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Increase the box-shadow */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
     }
     100% {
-        opacity: 0.2; /* Back to initial opacity */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Back to initial box-shadow */
+        opacity: 0.2; 
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
     }
 }
 
-.selected-players-container button {
-    color: #000; 
-}
 
-/* Modify the button styles to make them appear 3D */
 body button {
     text-decoration: none;
     color: #fff; /* Default text color */
@@ -224,19 +197,16 @@ body {
     margin-bottom: 20px; /* Add some margin for spacing */
 }
 
-/* Style the labels above the dropdowns */
 label {
     font-weight: bold;
 }
 
-/* Style the select elements */
-/* Style the select elements on hover */
 select:hover {
     border-color: #007BFF;
     background-color: #fff;
 }
 
-/* Style the select elements when focused */
+
 select:focus {
     border-color: #007BFF;
     background-color: #fff;
@@ -245,7 +215,7 @@ select:focus {
 /* Reduce the max-height of the dropdown list */
 select::-ms-expand,
 select {
-    max-height: 50px; /* Set max-height to half the default height */
+    max-height: 50px;
 }
 
 /* Style for the button container */
@@ -309,7 +279,7 @@ select {
 /* Style the dropdown options (players) */
 select option {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px; /* Slightly smaller font size for options */
+    font-size: 15px; /* Slightly smaller font size for options */
     font-weight: normal; /* Reset font weight for options */
     /* Add any other desired styles here */
 }
@@ -350,41 +320,13 @@ select option {
     border: 2px solid #6B0082;
 }
 
-
-/* modifying the positions of the 2 containers */
-
-.game-list-container {
-    position: absolute;
-    top: 78%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    width: 36%; 
-    max-width: 300px;
-    text-align: center; 
-    font-family: 'Georgia';
-}
-
-.game-list-container2 {
-      position: absolute;
-    top: 97%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 36%; 
-    max-width: 300px;
-    text-align: center; 
-    font-family: 'Georgia';
-}
-
 .game-list-container ul,
 .game-list-container li,
-.game-list-container span {
-    text-align: left; /* Reset text alignment for child elements */
-}
-
+.game-list-container span,
 .game-list-container2 ul,
 .game-list-container2 li,
 .game-list-container2 span {
-    text-align: left; /* Reset text alignment for child elements */
+    text-align: left; 
 }
 
 
@@ -403,7 +345,7 @@ select option {
             font-weight: 'Georgia';
             text-align: center;
             margin-bottom: 20px;
-         color: #000; /* Set the text color to black */
+         color: #000; /* black */
         }
 
         #countdown-container {
@@ -438,31 +380,29 @@ select option {
   select option[data-price] {
             font-weight: bold; 
             color: black;
-        }
-
-
- 
+        } 
 
 
 
- 
+ /* modifying the positions of the 2 containers */
+.game-list-container {
+    position: absolute;
+    top: 78%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 36%; 
+    max-width: 300px;
+    text-align: center; 
+    font-family: 'Georgia';
+}
 
-
-  
-    
-
-    
-    
-    
-   
-   
-
-
-
-
-        
-
-
-
-
- 
+.game-list-container2 {
+      position: absolute;
+    top: 97%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 36%; 
+    max-width: 300px;
+    text-align: center; 
+    font-family: 'Georgia';
+}

@@ -438,7 +438,18 @@ select option {
             color: black;
         }
 
- 
+ @media (max-width: 600px) {
+            .game-list-container,
+            .game-list-container2 {
+                text-align: center;
+            }
+
+            .game-list-container h2,
+            .game-list-container2 h2 {
+                text-align: center;
+                font-size: 24px;
+            }
+        }
 
 
 
@@ -448,19 +459,5 @@ select option {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-            font-weight: bold; 
-            color: black;
-        }
 
  

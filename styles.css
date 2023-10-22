@@ -3,8 +3,8 @@ body {
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    margin-top: -60px;
     margin-bottom: 260px;
+    margin-top: -60px;
 }
 
 #totalPrice, #requiredPrice, #budgetLeft {
@@ -339,7 +339,10 @@ select option {
     font-family: 'Arial Black', sans-serif;
     border: 2px solid #9400D3; 
     cursor: pointer;
-    margin-left: 50%;
+    position: absolute;
+    top: 108%; /* Adjust the top position as needed */
+    left: 40%;
+    transform: translateX(-60%);
 }
 
 #returnButton:hover {
@@ -437,9 +440,27 @@ select option {
             color: black;
         }
 
+
  
+
+
+
  
+
+
+  
+    
+
+    
+    
+    
    
+   
+
+
+
+
+        
 
 
 

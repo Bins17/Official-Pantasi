@@ -440,7 +440,7 @@ select option {
             color: black;
         }
 
- @media (max-width: 600px) {
+ @media (max-width: 900px) {
             .game-list-container,
             .game-list-container2 {
                 text-align: center;

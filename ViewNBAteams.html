@@ -44,38 +44,349 @@
     <label for="pgSelect">Point Guards</label>
     <div class="dropdown-container">
     <select id="pgSelect">
-        <option value="" disabled selected>Please select a Point Guard</option>
+        <option value="" disabled selected>Price | PG (Team) | 2022-23 Fantasy points average</option>
+        <!-- Add options for Point Guards here -->
+        <option value="Luka Doncic" data-price="84k">84k — ⚠ L. Doncic (DAL) 53.6  </option>
+        <option value="Shai Gilgeous-Alexander" data-price="78k">78k — S. Gilgeous-Alexander (OKC) 46.3 </option>
+        <option value="Trae Young" data-price="74k">74k — T. Young (ATL) 43.6</option>
+        <option value="LaMelo Ball" data-price="73k">73k — L. Ball (CHA) 43.2 </option>
+        <option value="Devin Booker" data-price="70k">70k — ⚠ D. Booker (PHX) 40.3</option>
+        <option value="Tyrese Haliburton" data-price="68k">68k — T. Haliburton (IND) 39.6</option>
+        <option value="De'Aaron Fox" data-price="67k">67k — D. Fox (SAC) 39.3  </option>
+        <option value="Jalen Brunson" data-price="63k">63k — J. Brunson (NYK) 35.6  </option>
+        <option value="Fred VanVleet" data-price="62k">62k — F. VanVleet (HOU) 35.8  </option>
+        <option value="Jrue Holiday" data-price="60k">60k — J. Holiday (BOS) 35.5  </option>
+        <option value="Darius Garland" data-price="58k">58k — D. Garland (CLE) 34.9   </option>
+        <option value="Jamal Murray" data-price="58k">58k — J. Murray (DEN) 34.8</option>
+        <option value="Cade Cunningham" data-price="56k">56k — C. Cunningham (DET) 32.7   </option>
+        <option value="C.J McCollum" data-price="54k">54k — C. McCollum (NOP) 31.4  </option>
+        <option value="Chris Paul" data-price="52k">52k — C. Paul (GS) 31.3</option> 
+        <option value="Spencer Dinwiddie" data-price="52k">52k — S. Dinwiddie (BKN) 30.0  </option>
+        <option value="Russell Westbrook" data-price="50k">50k — R. Westbrook (LAC) 29.8  </option>
+        <option value="Scoot Henderson" data-price="50k">50k — S. Henderson (POR) 3rd pick   </option>   
+        <option value="D'Angelo Russell " data-price="47k">47k — D. Russell (LAL) 27.4</option>
+        <option value="Amen Thompson" data-price="47k">47k — A. Thompson (HOU) 4th pick  </option>
+        <option value="Mike Conley" data-price="46k">46k — ⚠ M. Conley (MIN) 26.1  </option>
+        <option value="Markelle Fultz" data-price="45k">45k — M. Fultz (ORL) 25.1  </option>
+        <option value="Immanuel Quickley" data-price="44k">44k — I. Quickley (NYK) 25.3  </option>
+        <option value="Kyle Lowry" data-price="44k">44k — K. Lowry (MIA) 24.8   </option>
+        <option value="Marcus Smart" data-price="44k">44k — M. Smart (MEM) 24.1  </option>
+        <option value="Tre Jones" data-price="42k">42k —  T. Jones (SAS) 25.6  </option>
+        <option value="Malcolm Brogdon" data-price="42k">42k —  M. Brogdon (POR) 23.3  </option>
+        <option value="Tyus Jones" data-price="42k">42k — T. Jones (WAS) 22.4</option>
+        <option value="Cole Anthony" data-price="40k">40k — C. Anthony (ORL) 22.8  </option>
+        <option value="Dennis Schroder" data-price="40k">40k — D. Schroder (TOR) 19.9  </option>
+        <option value="Anthony Black" data-price="40k">40k — A. Black (ORL) 6th pick  </option>
+        <option value="Ben Simmons" data-price="38k">38k — B. Simmons (BKN) 22.2  </option>
+        <option value="Killian Hayes" data-price="38k">38k — K. Hayes (DET) 21.9  </option>
+        <option value="Jeremy Sochan" data-price="38k">38k — J. Sochan (SAS) 19.0  </option>
+        <option value="Collin Sexton" data-price="37k">37k — C. Sexton (UTA) 18.9  </option>
+        <option value="Talen Horton-Tucker" data-price="37k">37k — T. Horton-Tucker (UTA) 17.1   </option>
+        <option value="Kris Dunn" data-price="36k">36k — K. Dunn (UTA) 26.3  </option>
+        <option value="T.J McConnell" data-price="36k">36k — T. McConnell (IND) 20.1   </option>
+        <option value="Delon Wright" data-price="36k">36k — D. Wright (WAS) 17.1</option>
+        <option value="Bones Hyland" data-price="35k">35k — ⚠ B. Hyland (LAC) 17.6  </option>
+        <option value="Gabe Vincent" data-price="35k">35k — G. Vincent (LAL) 13.9</option>
+        <option value="Dennis Smith Jr." data-price="33k">33k — ⚠ D. Smith Jr. (BKN) 18.6  </option>
+        <option value="Coby White" data-price="33k">33k — C. White (CHI) 13.9  </option>
+        <option value="Andrew Nembhard" data-price="32k">32k — A. Nembhard (IND) 16.9  </option>
+        <option value="Keyonte George" data-price="32k">32k — K. George (UTA) 16th pick  </option>
+        <option value="Brandin Podziemski" data-price="32k">32k — B. Podziemski (GS) 19th pick</option>
+        <option value="Shake Milton" data-price="30k">30k — S. Milton (MIN) 13.9   </option>
+        <option value="Marcus Sasser" data-price="28k">28k — M. Sasser (DET) 25th pick  </option>
+        <option value="Jevon Carter" data-price="27k">27k — J. Carter (MIL) 12.9  </option>
+        <option value="Reggie Jackson" data-price="27k">27k — R. Jackson (DEN) 12.2</option>
+        <option value="Jordan Goodwin" data-price="25k">25k — J. Goodwin (PHX) 12.6</option>
+        <option value="Theo Maledon" data-price="25k">25k — ⚠ T. Maledon (CHA) 11.9 </option>
+         <option value="Tre Mann" data-price="25k">25k — T. Mann (OKC) 11.4  </option>
+        <option value="Patty Mills" data-price="25k">25k — P. Mills (ATL) 9.2</option>
+        <option value="Davion Mitchell" data-price="25k">25k — D. Mitchell (SAC) 9.2  </option>
+        <option value="Jordan McLaughlin" data-price="25k">25k — J. McLaughlin (MIN) 8.7  </option>
+        <option value="Payton Pritchard" data-price="25k">25k — P. Pritchard (BOS) 8.2  </option>
+        <option value="Derrick Rose" data-price="25k">25k — D. Rose (MEM) 7.7  </option>
+        <option value="Malachi Flynn" data-price="25k">25k — M. Flynn (TOR) 6.7   </option>
+        <option value="Miles McBride" data-price="25k">25k — M. McBride (NYK) 4.5  </option>
+         <option value="Vasilije Micic" data-price="25k">25k — V. Micic (OKC) 0.0  </option>
 
     </select>
 
     <label for="sgSelect">Shooting Guards</label>
     <div class="dropdown-container">
     <select id="sgSelect">
-        <option value="" disabled selected>Please select a Shooting Guard</option>
+        <option value="" disabled selected>Price | SG (Team) | 2022-23 Fantasy points average</option>
+        <!-- Add options for Shooting Guards here -->
+       <option value="Stephen Curry" data-price="76k">76k — S. Curry (GS) 44.2</option>
+       <option value="Kyrie Irving" data-price="72k">72k — K. Irving (DAL) 44.0  </option>
+       <option value="Donovan Mitchell" data-price="70k">70k — D. Mitchell (CLE) 40.3  </option>
+       <option value="Jaylen Brown" data-price="67k">67k — J. Brown (BOS) 38.7  </option>
+       <option value="Anthony Edwards" data-price="64k">64k — A. Edwards (MIN) 36.0 </option>
+       <option value="Mikal Bridges" data-price="62k">62k — M. Bridges (BKN) 35.8   </option>
+       <option value="Dejounte Murray" data-price="60k">60k — D. Murray (ATL) 35.5</option>
+       <option value="Desmond Bane" data-price="58k">58k — D. Bane (MEM) 34.0  </option>
+       <option value="Zach LaVine" data-price="58k">58k — Z. LaVine (CHI) 33.8  </option>
+       <option value="Terry Rozier" data-price="57k">57k — T. Rozier (CHA) 34.3</option>
+       <option value="Bradley Beal" data-price="56k">56k — ⚠ B. Beal (PHX) 32.6</option>
+        <option value="Josh Giddey" data-price="54k">54k — J. Giddey (OKC) 31.9   </option>
+       <option value="Tyler Herro" data-price="52k">52k — T. Herro (MIA) 31.5  </option>
+       <option value="Jalen Green" data-price="50k">50k — J. Green (HOU) 29.1   </option>
+       <option value="Anfernee Simons" data-price="50k">50k — A. Simons (POR) 28.9  </option>
+       <option value="Scottie Barnes" data-price="50k">50k — ⚠ S. Barnes (TOR) 28.2   </option>
+       <option value="Jordan Poole" data-price="50k">50k — J. Poole (WAS) 26.4</option>
+       <option value="Jordan Clarkson" data-price="48k">48k — J. Clarkson (UTA) 28.8   </option>
+       <option value="Devin Vassell" data-price="47k">47k — D. Vassell (SAS) 28.1   </option>
+       <option value="Buddy Hield" data-price="45k">45k — B. Hield (IND) 27.5  </option>
+       <option value="Jaden Ivey" data-price="44k">44k — J. Ivey (DET) 24.6  </option>
+       <option value="Kevin Huerter" data-price="43k">43k — K. Huerter (SAC) 23.6  </option>
+        <option value="Austin Reaves" data-price="43k">43k — A. Reaves (LAL) 20.6</option>
+        <option value="Gary Trent Jr." data-price="42k">42k — G. Trent Jr. (TOR) 23.9  </option>
+        <option value="Benedict Mathurin" data-price="40k">40k — B. Mathurin (IND) 21.8  </option>
+        <option value="Caris LeVert" data-price="40k">40k — C. LeVert (CLE) 21.6  </option>
+        <option value="Bogdan Bogdanovic" data-price="38k">38k — B. Bogdanovic (ATL) 20.6</option>
+        <option value="Luke Kennard" data-price="38k">38k — L. Kennard (MEM) 19.1  </option>
+        <option value="Derrick White" data-price="38k">38k — D. White (BOS) 18.6  </option>
+        <option value="Donte DiVincenzo" data-price="38k">38k — D. DiVincenzo (NYK) 20.3   </option>
+        <option value="Malik Monk" data-price="38k">38k — M. Monk (SAC) 19.4  </option>
+         <option value="Cason Wallace" data-price="38k">38k — C. Wallace (OKC) 10th pick   </option>
+         <option value="Herb Jones" data-price="37k">37k — H. Jones (NOP) 17.8  </option>
+        <option value="Alec Burks" data-price="36k">36k — A. Burks (DET) 18.1  </option>
+        <option value="Kentavious Caldwell-Pope" data-price="36k">36k — K. Caldwell-Pope (DEN) 16.9</option>
+        <option value="Quentin Grimes" data-price="35k">35k — Q. Grimes (NYK) 17.6  </option>
+        <option value="Grayson Allen" data-price="35k">35k — G. Allen (PHX) 16.6</option>
+        <option value="Jordan Hawkins" data-price="35k">35k — J. Hawkins (NOP) 14th pick  </option>
+        <option value="Jalen Suggs" data-price="34k">34k — J. Suggs (ORL) 17.1  </option>
+        <option value="Eric Gordon" data-price="34k">34k — E. Gordon (PHX) 15.2</option>
+        <option value="Lonnie Walker IV" data-price="33k">33k — L. Walker IV (BKN) 14.2   </option>
+        <option value="Terance Mann" data-price="33k">33k — T. Mann  (LAC) 14.1  </option>
+         <option value="Isaiah Joe" data-price="32k">32k — I. Joe (OKC) 13.9   </option>
+        <option value="Garry Harris" data-price="32k">32k — G. Harris (ORL) 12.9  </option>
+        <option value="Kobe Bufkin" data-price="32k">32k — K. Bufkin (ATL) 19th pick</option>
+        <option value="Malaki Branham" data-price="30k">30k — M. Branham (SAS) 13.4  </option>
+        <option value="Josh Richardson" data-price="30k">30k — ⚠ J. Richardson (MIA) 12.4</option>
+        <option value="Landry Shamet" data-price="28k">28k — ⚠ L. Shamet (WAS) 12.7</option>
+        <option value="Reggie Bullock" data-price="28k">28k — R. Bullock (HOU) 12.6  </option>
+        <option value="Ayo Dosunmu" data-price="28k">28k — A. Dosunmu (CHI) 12.4  </option>
+        <option value="Cam Thomas" data-price="28k">28k — C. Thomas (BKN) 11.7  </option>
+        <option value="Alex Caruso" data-price="28k">28k — A. Caruso (CHI) 11.4  </option>
+        <option value="Nick Smith Jr. " data-price="28k">28k — N. Smith Jr. (CHA) 27th pick   </option>
+        <option value="Seth Curry" data-price="27k">27k — S. Curry (DAL) 12.2  </option>
+        <option value="Ochai Agbaji" data-price="27k">27k — O. Agbaji (UTA) 11.4  </option>
+        <option value="Gary Payton II" data-price="27k">27k — G. Payton II (GS) 11.3</option>
+        <option value="Jaden Hardy" data-price="25k">25k — ⚠ J. Hardy (DAL) 10.2  </option>
+        <option value="James Bouknight" data-price="25k">25k — J. Bouknight (CHA) 9.4  </option>
+        <option value="Blake Wesley" data-price="25k">25k — B. Wesley (SAS) 9.4   </option>
+        <option value="Johnny Davis" data-price="25k">25k — J. Davis (WAS) 8.9  </option>
+        <option value="Dyson Daniels" data-price="25k">25k — D. Daniels (NOP) 8.6  </option>
+        <option value="Nickeil Alexander-Walker" data-price="25k">25k — N. Alexander-Walker (MIN) 8.2  </option>
+        <option value="Christian Braun" data-price="25k">25k — C. Braun (DEN) 6.4</option>
+        <option value="Moses Moody" data-price="25k">25k — M. Moody (GS) 5.2</option>
+        <option value="Max Christie" data-price="25k">25k — M. Christie (LAL) 4.2</option>
+        <option value="Peyton Watson" data-price="25k">25k — P. Watson (DEN) 4.2</option>
        
     </select>
 
      <label for="sfSelect">Small Forwards</label>
      <div class="dropdown-container">
      <select id="sfSelect">
-    <option value="" disabled selected>Please select a Small Forward</option>
-   
+    <option value="" disabled selected>Price | SF (Team) | 2022-23 Fantasy points average</option>
+    <!-- Add options for Small Forwards here -->
+    <option value="Jayson Tatum" data-price="78k">78k — J. Tatum (BOS) 47.1 </option>
+    <option value="Paul George" data-price="66k">66k —  P. George (LAC) 37.7  </option>
+    <option value="Jimmy Butler" data-price="65k">65k — J. Butler (MIA) 36.5  </option>
+    <option value="Lauri Markkanen" data-price="63k">63k — L. Markkanen (UTA) 36.6   </option>
+    <option value="DeMar DeRozan" data-price="62k">62k — D. DeRozan (CHI) 36.3  </option>
+    <option value="Brandon Ingram" data-price="60k">60k — B. Ingram (NOP) 35.0  </option>
+    <option value="Brandon Miller" data-price="54k">54k — B. Miller (CHA) 2nd pick </option>
+    <option value="Klay Thompson" data-price="52k">52k — K. Thompson (GS) 30.8</option>
+    <option value="Keldon Johnson" data-price="50k">50k — K. Johnson (SAS) 30.0   </option>
+    <option value="Franz Wagner" data-price="48k">48k — F. Wagner (ORL) 27.8   </option>
+    <option value="R.J Barrett" data-price="46k">46k — R. Barrett (NYK) 26.5 </option>
+    <option value="O.G Anunoby" data-price="46k">46k — O. Anunoby (TOR) 26.0  </option>
+    <option value="Cam Johnson" data-price="45k">45k — C. Johnson (BKN) 25.8  </option>
+    <option value="Michael Porter Jr. " data-price="45k">45k — M. Porter Jr. (DEN) 25.0</option>
+    <option value="Ausar Thompson" data-price="43k">43k — A. Thompson (DET) 5th pick   </option>
+    <option value="Josh Hart" data-price="42k">42k — J. Hart (NYK) 24.4</option>
+    <option value="Gordon Hayward" data-price="42k">42k — G. Hayward (CHA) 23.3</option>
+     <option value="Luguentz Dort" data-price="42k">42k — L. Dort (OKC) 22.3  </option>
+    <option value="Bruce Brown Jr. " data-price="40k">40k — B. Brown Jr. (IND) 21.8  </option>
+    <option value="Harrison Barnes" data-price="40k">40k — H. Barnes (SAC) 20.8  </option>
+    <option value="Dillon Brooks" data-price="40k">40k — D. Brooks (HOU) 20.6  </option>
+    <option value="Tim Hardaway Jr." data-price="38k">38k —  Tim Hardaway Jr. (DAL) 20.6  </option>
+    <option value="Jaden McDaniels" data-price="38k">38k — ⚠ J. McDaniels (MIN) 18.6  </option>
+    <option value="Saddiq Bey" data-price="38k">38k — S. Bey (ATL) 18.3</option>
+    <option value="Bilal Coulibaly" data-price="38k">38k — B. Coulibaly (WAS) 7th pick   </option>
+    <option value="Max Strus" data-price="37k">37k — M. Strus (CLE) 18.1   </option>
+    <option value="Royce O'Neale " data-price="36k">36k — R. O'Neale (BKN) 18.5   </option>
+    <option value="Kenyon Martin Jr. " data-price="36k">36k — K. Martin Jr. (LAC) 18.5   </option>
+    <option value="Deni Avdija" data-price="36k">36k — D. Avdija (WAS) 18.2   </option>
+    <option value="Jett Howard" data-price="36k">36k — J. Howard (ORL) 11th pick  </option>
+    <option value="Caleb Martin" data-price="35k">35k — C. Martin (MIA) 16.8   </option>
+    <option value="Gradey Dick" data-price="35k">35k — G. Dick (TOR) 13th pick  </option>
+     <option value="Kenrich Williams" data-price="34k">34k — ⚠ K. Williams (OKC) 15.8  </option>
+    <option value="Jordan Nwora" data-price="33k">33k — J. Nwora (IND) 20.3   </option>
+    <option value="Shaedon Sharpe" data-price="33k">33k — S. Sharpe (POR) 13.6   </option>
+    <option value="Josh Green" data-price="33k">33k — J. Green (DAL) 13.6  </option>
+    <option value="Corey Kispert" data-price="32k">32k — C. Kispert (WAS) 15.9   </option>
+    <option value="Torrey Craig" data-price="32k">32k — T. Craig (CHI) 15.0  </option>
+    <option value="Jea'Sean Tate" data-price="32">32k — J. Tate (HOU) 14.6  </option>
+    <option value="Jamie Jaquez Jr." data-price="32k">32k — ⚠ J. Jaquez Jr. (MIA) 18th pick </option>
+    <option value="Taurean Prince" data-price="32k">32k — T. Prince (LAL) 12.4</option>
+    <option value="Cam Whitmore" data-price="32k">32k — C. Whitmore (HOU) 2Oth pick  </option>
+    <option value="Matisse Thybulle" data-price="30k">30k — M. Thybulle (POR) 14.6  </option>
+    <option value="Aaron Nesmith" data-price="30k">30k — A. Nesmith (IND) 14.6  </option>
+    <option value="AJ Griffin" data-price="30k">30k — A. Griffin (ATL) 12.4</option>
+    <option value="Josh Okogie" data-price="30k">30k — J. Okogie (PHX) 12.1</option>
+    <option value="Troy Brown Jr." data-price="28k">28k — T. Brown Jr. (MIN) 13.8  </option>
+    <option value="Joe Harris" data-price="28k">28k — J. Harris (DET) 11.4  </option>
+    <option value="Olivier Maxence-Prosper " data-price="28k">28k — O. Maxence-Prosper (DAL) 24th pick   </option>
+    <option value="John Konchar" data-price="27k">27k — ⚠ J. Konchar (MEM) 13.3  </option>
+    <option value="Joe Ingles" data-price="27k">27k — J. Ingles (ORL) 12.4  </option>
+    <option value="Chris Duarte" data-price="27k">27k — ⚠ C. Duarte (SAC) 11.4  </option>
+    <option value="Brice Sensabaugh" data-price="27k">27k — B. Sensabaugh (UTA) 28th pick  </option>
+    <option value="Julian Champagnie" data-price="25k">25k — J. Champagnie (SAS) 16.8  </option>
+    <option value="Cody Martin" data-price="25k">25k — ⚠ C. Martin (CHA) 10.1   </option>
+    <option value="Isaac Okoro" data-price="25k">25k — I. Okoro (CLE) 9.9  </option>
+    <option value="Chuma Okeke" data-price="25k">25k — C. Okeke (ORL) 9.6  </option>
+    <option value="Duncan Robinson" data-price="25k">25k — D. Robinson (MIA) 9.2  </option>
+    <option value="Julian Strawther" data-price="28k">25k — ⚠ J. Strawther (DEN) 29th pick</option>
+    <option value="Kobe Brown" data-price="25k">25k — K. Brown (LAC) 30th pick  </option>
+    <option value="Leonard Miller" data-price="25k">25k — L. Miller (MIN) 33rd pick  </option>
+    <option value="Julian Phillips" data-price="25k">25k — J. Phillips (CHI) 35th pick  </option>
+    <option value="G.G Jackson" data-price="25k">25k — G. Jackson (MEM) 45th pick   </option>
+    <option value="Emoni Bates" data-price="25k">25k — E. Bates (CLE) 49th pick   </option>
+    <option value="Sam Hauser" data-price="25k">25k — S. Hauser (BOS) 8.9   </option>
+    <option value="Nassir Little" data-price="25k">25k — N. Little (PHX) 8.4</option>
+    <option value="Simone Fontecchio" data-price="25k">25k — S. Fontecchio (UTA) 7.7  </option>
+    <option value="Yuta Watanabe" data-price="25k">25k — Y. Watanabe (PHX) 7.4</option>
+    <option value="Justin Holiday" data-price="25k">25k — J. Holiday (DEN) 5.2</option>
+    <option value="Toumani Camara" data-price="25k">25k — T. Camara (POR) 52nd pick </option>
    </select>
 
   <label for="pfSelect">Power Forwards</label>
 <div class="dropdown-container">
     <select id="pfSelect">
-        <option value="" disabled selected>Please select a Power Forward</option>
-       
+        <option value="" disabled selected>Price | PF (Team) | 2022-23 Fantasy points average</option>
+        <!-- Add options for Power Forwards here -->
+        <option value="LeBron James" data-price="76k">76k — L. James (LAL) 44.6</option>
+        <option value="Kevin Durant" data-price="72k">72k — K. Durant (PHX) 38.7</option>
+        <option value="Julius Randle" data-price="70k">70k — J. Randle (NYK) 42.0  </option>
+        <option value="Zion Williamson" data-price="68k">68k — Z. Williamson (NOP) 39.4  </option>
+        <option value="Pascal Siakam" data-price="67k">67k — P. Siakam (TOR) 38.4  </option>
+        <option value="Kawhi Leonard" data-price="66k">66k — K. Leonard (LAC) 36.7  </option>
+        <option value="Victor Wembanyama" data-price="60k">60k — V. Wembanyama (SAS) 1st pick   </option>
+        <option value="Jaren Jackson Jr." data-price="60k">60k — J. Jackson Jr. (MEM) 34.2  </option>
+        <option value="Karl Anthony-Towns" data-price="58k">58k — K. Towns (MIN) 33.6  </option>
+        <option value="Kyle Kuzma" data-price="54k">54k — K. Kuzma (WAS) 31.9   </option>
+        <option value="Paolo Banchero" data-price="54k">54k — P. Banchero (ORL) 30.2  </option>
+        <option value="Evan Mobley" data-price="52k">52k — E. Mobley (CLE) 30.2  </option>
+        <option value="Andrew Wiggins" data-price="48k">48k — A. Wiggins (GS) 28.0</option>
+        <option value="Jerami Grant" data-price="47k">47k — J. Grant (POR) 27.8  </option>
+        <option value="Aaron Gordon" data-price="46k">46k — A. Gordon (DEN) 26.7</option>
+        <option value="P.J Washington " data-price="44k">44k — P. Washington (CHA) 24.8</option>
+         <option value="Jalen Williams" data-price="43k">43k — J. Williams (OKC) 24.8  </option>
+         <option value="John Collins" data-price="43k">43k — J. Collins (UTA) 23.2  </option>
+        <option value="Al Horford" data-price="42k">42k — A. Horford (BOS) 23.7  </option>
+        <option value="Jabari Smith Jr. " data-price="40k">40k — J. Smith Jr. (HOU) 21.4  </option>
+        <option value="De'Andre Hunter" data-price="40k">40k — D. Hunter (ATL) 20.8</option>
+        <option value="Jarace Walker" data-price="40k">40k — J. Walker (IND) 8th pick </option>
+        <option value="Kyle Anderson" data-price="38k">38k — K. Anderson (MIN) 22.0  </option>
+        <option value="Keegan Murray" data-price="38k">38k — ⚠ K. Murray (SAC) 19.3  </option>
+        <option value="Marvin Bagley III" data-price="38k">38k — M. Bagley III (DET) 18.2   </option>
+        <option value="Taylor Hendricks" data-price="38k">38k — T. Hendricks (UTA) 9th pick  </option>
+        <option value="Marcus Morris Sr." data-price="35k">35k — ⚠M. Morris Sr. (LAC) 17.8  </option>
+        <option value="Rui Hachimura" data-price="35k">35k — R. Hachimura (LAL) 13.8 </option>
+        <option value="Patrick Williams" data-price="34k">34k — P. Williams (CHI) 15.8  </option>
+        <option value="Chris Boucher" data-price="33k">33k — C. Boucher (TOR) 15.0  </option>
+        <option value="Grant Williams" data-price="33k">33k — G. Williams (DAL) 13.8  </option>
+        <option value="Kevin Love" data-price="32k">32k — K. Love (MIA) 13.0   </option>
+        <option value="Dorian Finney-Smith" data-price="32k">32k — D. Finney-Smith (BKN) 12.8  </option>
+        <option value="Danilo Gallinari" data-price="32k">32k — D. Gallinari (WAS) 0.0  </option>
+        <option value="Jonathan Kuminga" data-price="30k">30k — J. Kuminga (GS) 13.1</option>
+        <option value="Georges Niang" data-price="30k">30k — G. Niang (CLE) 12.9  </option>
+        <option value="Keita Bates-Diop" data-price="28k">28k — K. Bates-Diop (PHX) 14.1</option>
+        <option value="Cedi Osman" data-price="28k">28k — C. Osman (SAS) 12.4   </option>
+        <option value="Trey Lyles" data-price="28k">28k — ⚠ T. Lyles (SAC) 12.3  </option>
+        <option value="Jonathan Isaac" data-price="28k">28k — J. Isaac (ORL) 11.8  </option>
+        <option value="Kris Murray" data-price="28k">28k — K. Murray (POR) 23rd pick  </option>
+        <option value="Nicholas Batum" data-price="27k">27k — N. Batum (LAC) 11.6   </option>
+        <option value="Obi Toppin " data-price="27k">27k — O. Toppin (IND) 11.4  </option>
+        <option value="Jalen Johnson" data-price="27k">27k — J. Johnson (ATL) 11.3</option>
+        <option value="Jeff Green" data-price="27k">27k —  J. Green (HOU) 10.9  </option>
+        <option value="Otto Porter Jr." data-price="27k">27k — O. Porter Jr. (HOU) 10.9   </option>
+        <option value="Robert Covington" data-price="25k">25k — R. Covington (LAC) 11.6  </option>
+        <option value="Maxi Kleber" data-price="25k">25k — M. Kleber (DAL) 10.6   </option>
+        <option value="Jalen McDaniels" data-price="25k">25k — J. McDaniels (TOR) 9.6  </option>
+        <option value="Oshae Brissett" data-price="25k">25k — O. Brissett (BOS) 9.6  </option>
+        <option value="David Roddy" data-price="25k">25k — D. Roddy (MEM) 8.4  </option>
+        <option value="Nikola Jovic" data-price="25k">25k — N. Jovic (MIA) 7.6  </option>
+        <option value="Jabari Walker" data-price="25k">25k — J. Walker (POR) 5.9  </option>
+        <option value="Patrick Baldwin Jr." data-price="25k">25k — P. Baldwin Jr. (WAS) 4.2  </option>
+        <option value="Sasha Vezenkov" data-price="25k">25k — S. Vezenkov (SAC) 0.0   </option>
     </select>
 
 
    <label for="cSelect">Centers</label>
 <div class="dropdown-container">
     <select id="cSelect">
-    <option value="" disabled selected>Please select a Center</option>
-      
-
+        <option value="" disabled selected>Price | C (Team) | 2022-23 Fantasy points average</option>
+        <option value="Nikola Jokic" data-price="82k">82k — N. Jokic (DEN) 49.7</option>
+        <option value="Anthony Davis" data-price="77k">77k — A. Davis (LAL) 46.4</option>
+        <option value="Domantas Sabonis" data-price="70k">70k — D. Sabonis  (SAC) 41.9  </option>
+        <option value="Kristaps Porzingis" data-price="62k">62k — K. Porzingis (BOS) 36.6  </option>
+        <option value="Bam Adebayo" data-price="58k">58k — B. Adebayo (MIA) 34.5   </option>
+        <option value="Nikola Vucevic" data-price="57k">57k — N. Vucevic (CHI) 34.2  </option>
+         <option value="Chet Holmgren" data-price="54k">54k — C. Holmgren (OKC) 0.0  </option>
+        <option value="Myles Turner" data-price="52k">53k — M. Turner (IND) 31.4  </option>
+        <option value="De'Andre Ayton" data-price="52k">52k — D. Ayton (POR) 30.5  </option>
+        <option value="Jakob Poeltl" data-price="50k">50k — J. Poeltl (TOR) 29.8   </option>
+        <option value="Rudy Gobert" data-price="50k">50k — R. Gobert (MIN) 28.7  </option>
+        <option value="Jarrett Allen" data-price="48k">48k — ⚠ J. Allen (CLE) 27.3  </option>
+        <option value="Nic Claxton" data-price="48k">48k — N. Claxton (BKN) 27.3  </option>
+        <option value="Clint Capela" data-price="47k">47k — C. Capela (ATL) 27.2</option>
+        <option value="Wendell Carter Jr." data-price="46k">46k — W. Carter Jr. (ORL) 26.7  </option>
+        <option value="Alperen Sengun" data-price="46k">46k — A. Sengun (HOU) 26.5  </option>
+        <option value="Jonas Valanciunas" data-price="45k">45k — J. Valanciunas (NOP) 25.5  </option>
+        <option value="Jusuf Nurkic" data-price="45k">45k — J. Nurkic (PHX) 24.8</option>
+        <option value="Christian Wood" data-price="44k">44k — C. Wood (LAL) 27.4</option>
+        <option value="Ivica Zubac" data-price="43k">43k — I. Zubac (LAC) 23.3  </option>
+        <option value="Walker Kessler" data-price="42k">42k — W. Kessler (UTA) 22.6  </option>
+         <option value="Kelly Olynyk" data-price="40k">40k — K. Olynyk (UTA) 22.2  </option>
+        <option value="Isaiah Stewart" data-price="40k">40k — I. Stewart (DET) 21.6  </option>
+        <option value="Kevon Looney" data-price="38k">38k — K. Looney (GS) 20.8</option>
+        <option value="Robert Williams III" data-price="38k">38k — R. Williams (POR) 20.1   </option>
+        <option value="Mitchell Robinson" data-price="38k">38k — M. Robinson (NYK) 19.8  </option>
+        <option value="Mark Williams" data-price="38k">38k — M. Williams (CHA) 19.4</option>
+        <option value="James Wiseman" data-price="37k">37k — J. Wiseman (DET) 20.6  </option>
+        <option value="Onyeka Okongwu" data-price="37k">37k — O. Okongwu (ATL) 18.9</option>
+        <option value="Zach Collins" data-price="36k">36k — Z. Collins (SAS) 19.2   </option>
+        <option value="Jalen Duren" data-price="36k">36k — J. Duren (DET) 19.1  </option>
+        <option value="Daniel Gafford" data-price="36k">36k — D. Gafford (WAS) 17.5   </option>
+        <option value="Xavier Tillman Sr." data-price="36k">36k — X. Tillman (MEM) 16.5  </option>
+        <option value="Dereck Lively II" data-price="36k">36k — D. Lively II (DAL) 12th pick  </option>
+        <option value="Naz Reid" data-price="35k">35k — N. Reid (MIN) 16.8  </option>
+        <option value="Nick Richards" data-price="34k">34k — N. Richards (CHA) 17.2</option>
+        <option value="Santi Aldama" data-price="34k">34k — S. Aldama (MEM) 15.8  </option>
+        <option value="Precious Achiuwa" data-price="34k">34k — P. Achiuwa (TOR) 15.2  </option>
+        <option value="Mason Plumlee" data-price="33k">33k — M. Plumlee (LAC) 14.7  </option>
+        <option value="Bol Bol" data-price="32k">32k — B. Bol (PHX) 17.5</option>
+        <option value="Larry Nance Jr. " data-price="32k">32k — L. Nance Jr. (NOP) 13.5  </option>
+        <option value="Jalen Smith" data-price="30k">30k — J. Smith (IND) 15.5  </option>
+        <option value="Mo Wagner" data-price="30k">30k — M. Wagner (ORL) 15.3  </option>
+        <option value="Isaiah Hartenstein" data-price="30k">30k — I. Hartenstein (NYK) 13.7   </option>
+        <option value="Jock Landale" data-price="30k">30k — J. Landale (HOU) 12.3  </option>
+        <option value="Andre Drummond" data-price="28k">28k — ⚠ A. Drummond (CHI) 12.2  </option>
+        <option value="Noah Clowney" data-price="28k">28k — N. Clowney (BKN) 21st pick  </option>
+        <option value="Isaiah Jackson" data-price="27k">27k — I. Jackson (IND) 13.8  </option>
+        <option value="Dwight Powell" data-price="27k">27k — D. Powell (DAL) 10.8   </option>
+        <option value="Charles Bassey" data-price="25k">25k — C. Bassey (SAS) 11.5  </option>
+        <option value="Dario Saric" data-price="25k">25k — D. Saric (GS) 9.6</option>
+        <option value="Mike Muscala" data-price="25k">25k — M. Muscala (WAS) 9.1  </option>
+        <option value="Day'Ron Sharpe" data-price="25k">25k — D. Sharpe (BKN) 8.8  </option>
+        <option value="Jaxson Hayes" data-price="25k">25k — J. Hayes (LAL) 7.9</option>
+        <option value="Jericho Sims" data-price="25k">25k — J. Sims (NYK) 7.8  </option>
+        <option value="Thomas Bryant" data-price="25k">25k — T. Bryant (MIA) 7.6 </option>
+        <option value="Damian Jones" data-price="25k">25k — D. Jones (CLE) 7.6  </option>
+        <option value="Zeke Nnaji" data-price="25k">25k — Z. Nnaji (DEN) 7.4</option>
+        <option value="Richaun Holmes" data-price="25k">25k — R. Holmes (DAL) 4.2  </option>
     </select>
 </div>
 
@@ -120,19 +431,4 @@
 <script src="codes.js"></script>
 </body>
 </html>
-
-
-  
-
-   
-
-
- 
-
-    
-
-
-
-          
-    
 

@@ -506,10 +506,10 @@ function updateCountdown() {
             // If the countdown is over, display a message
             if (distance < 0) {
                 clearInterval(interval);
-                document.getElementById("days").textContent = "EXPIRED";
-                document.getElementById("hours").textContent = "";
-                document.getElementById("minutes").textContent = "";
-                document.getElementById("seconds").textContent = "";
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
             }
         }
 

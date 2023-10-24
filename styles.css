@@ -1,10 +1,9 @@
-
 body {
     background-image: url('Steph.gif');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    margin-bottom: 260px;
+    margin-bottom: 280px;
     margin-top: -60px;
     background-color: #333;
     color: #fff;
@@ -407,5 +406,7 @@ select option {
 #pfSelect,
 #cSelect {
   position: relative; /* Ensure relative positioning */
-  z-index: 2; 
+  z-index: 4; 
 }
+
+

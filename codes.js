@@ -461,8 +461,8 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
-    "Lakers @ Nuggets | 7:30am",
-   " Suns @ Warriors | 10:00am",   
+    "Lakers @ Nuggets 7:30am",
+   " Suns @ Warriors 10:00am",   
 ];
 
 
@@ -548,6 +548,34 @@ function populateGameListSecondDay() {
 }
 
 populateGameListSecondDay();
+
+
+
+
+ 
+        
+         
+
+    
+ 
+
+        
+
+
+            
+         
+    
+   
+
+    
+    
+
+  
+      
+
+           
+
+
 
        
        

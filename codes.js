@@ -461,7 +461,8 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
-    "No Games Available",  
+    "Sixers @ Bucks 7:30am",  
+    "Suns @ Lakers 10:00am",
 ];
 
 
@@ -486,7 +487,7 @@ function updateLineup() {
 updateLineup();
 
 function updateCountdown() {
-            const targetDate = new Date('2023-10-26T21:45:00'); // October 26, 2023, 9:45 PM
+            const targetDate = new Date('2023-10-26T21:00:00'); // October 26, 2023, 9:00 PM
 const now = new Date().getTime();
 const distance = targetDate - now;
 
@@ -521,7 +522,18 @@ const distance = targetDate - now;
 
 
         const nbaGamesSecondDay = [
-    "No Games Available",
+    "Nuggets @ Grizzlies 7:00am",
+    "Pistons @ Hornets 7:00am",
+    "Knicks @ Hawks 7:30am",
+    "Heat @ Celtics 7:30am",
+    "Thunder @ Cavaliers 7:30am",
+    "Rockets @ Spurs 8:00am",
+    "Raptors @ Bulls 8:00am",
+    "Nets @ Mavericks 8:30am",
+    "Clippers @ Jazz 9:30am",
+    "Magic @ Blazers 10:00am",
+    "Warriors @ Kings 10:00am",
+
    
     // Add more games as needed
 ];

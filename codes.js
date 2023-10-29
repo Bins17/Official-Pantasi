@@ -461,7 +461,12 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
-       "Fantasy for Today is currently underwork...",
+"Thunder @ Nuggets 3:30am",
+"Hawks @ Bucks 7:00am",
+"Rockets @ Warriors 7:00am",
+"Blazers @ Sixers 7:30am",
+"Lakers @ Kings 9:00am",
+"Spurs @ Clippers 9:00am",
 ];
 
 

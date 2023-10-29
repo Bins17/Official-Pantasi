@@ -1,9 +1,10 @@
 body {
-   background-image: url('Steph.gif');
+   background-image: url('Bron2.gif');
    background-size: 100% 100%; 
    background-repeat: no-repeat;
    background-attachment: fixed;
-   margin: 0; /* Reset margins */
+   margin-bottom: 280px;
+   margin-top: -60px; /* Reset margins */
    padding: 0; /* Reset padding */
    background-color: #333;
    color: #fff;

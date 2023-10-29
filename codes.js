@@ -486,7 +486,7 @@ function updateLineup() {
 updateLineup();
 
 function updateCountdown() {
-             const targetDate = new Date('2023-10-29T22:30:00'); // October 29 90:00 PM
+  const targetDate = new Date('2023-10-29T21:30:00');          
 const now = new Date().getTime();
 const distance = targetDate - now;
 

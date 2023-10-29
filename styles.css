@@ -1,14 +1,15 @@
 body {
-    background-image: url('Steph.gif');
-     background-size: cover;
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    margin-bottom: 280px;
-    margin-top: -60px;
-    background-color: #333;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Glowing black border for text */
+   background-image: url('Steph.gif');
+   background-size: 100% 100%; 
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   margin: 0; /* Reset margins */
+   padding: 0; /* Reset padding */
+   background-color: #333;
+   color: #fff;
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Glowing black border for text */
 }
+
 
 
 #totalPrice, #requiredPrice, #budgetLeft {

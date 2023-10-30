@@ -461,7 +461,7 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
-"To be updated...",
+"To be Updated...", 
 ];
 
 
@@ -486,7 +486,7 @@ function updateLineup() {
 updateLineup();
 
 function updateCountdown() {
-  const targetDate = new Date('2023-10-29T21:30:00');          
+     const targetDate = new Date('2023-10-30T21:30:00');       
 const now = new Date().getTime();
 const distance = targetDate - now;
 

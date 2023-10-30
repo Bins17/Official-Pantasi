@@ -472,8 +472,6 @@ const nbaGamesToday = [
 "Heat @ Bucks 8:00am",
 "Jazz @ Nuggets 9:00am",
 "Magic @ Lakers 10:30am",
-    
-    
 ];
 
 

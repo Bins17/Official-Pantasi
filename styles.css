@@ -385,7 +385,7 @@ select option {
  /* modifying the positions of the 2 containers */
 .game-list-container {
     position: absolute;
-    top: 85%;
+    top: 95%;
     left: 45%;
     transform: translate(-50%, -50%);
     width: 36%; 

@@ -535,7 +535,7 @@ populateGameList();
 
 
 function updateCountdown() {
-            const targetDate = new Date('2023-11-02T21:30:00'); // Nov 2nd at 9:30 PM
+            const targetDate = new Date('2023-11-02T21:00:00'); // Nov 2nd at 9:30 PM
             const now = new Date().getTime();
             const distance = targetDate - now;
 

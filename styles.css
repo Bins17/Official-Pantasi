@@ -1,5 +1,5 @@
 body {
-   background-image: url('Bron2.gif');
+     background-image: url(Bron2.gif);
    background-size: 100% 100%; 
    background-repeat: no-repeat;
    background-attachment: fixed;
@@ -7,9 +7,10 @@ body {
    margin-top: -60px; /* Reset margins */
    padding: 0; /* Reset padding */
    background-color: #333;
-   color: #fff;
-   text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Glowing black border for text */
+
+   color: white;
 }
+
 
 
 
@@ -265,17 +266,16 @@ select {
     display: block;
 }
 
-/* Style the select elements with a light background color */
 select {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 9px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
     background-color: #f0f0f0; /* Set a light gray background color */
     color: #333;
-    /* Add any other desired styles here */
+
 }
 
 /* Style the dropdown options (players) */
@@ -289,8 +289,9 @@ select option {
 #copyButton {
     border-radius: 25px;
     padding: 20px 40px;
-    background-color:  #90EE90;
-    color: black;
+    background: linear-gradient(to bottom, #FF00CC, #333399); 
+    color: white;
+    font-size: 20px;
     font-weight: bold; 
     font-family: 'Arial Black', sans-serif;
     border: 2px solid #9400D3;
@@ -305,8 +306,9 @@ select option {
 #returnButton {
     border-radius: 25px; 
     padding: 20px 50px;
-    background-color:  #90EE90;
-    color: black;
+     background: linear-gradient(to bottom, #FF00CC, #333399); 
+    color: white;
+    font-size: 20px;
     font-weight: bold; 
     font-family: 'Arial Black', sans-serif;
     border: 2px solid #9400D3; 
@@ -324,7 +326,7 @@ select option {
 .game-list-container2 ul,
 .game-list-container2 li,
 .game-list-container2 span {
-    text-align: left; 
+    text-align: center; 
 }
 
 
@@ -339,12 +341,13 @@ select option {
         }
 
         #countdown-header {
-            font-size: 24px;
-            font-weight: 'Georgia';
-            text-align: center;
-            margin-bottom: 20px;
-         color: #000; /* black */
-        }
+    font-size: 25px;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; 
+}
+
 
         #countdown-container {
             display: flex;
@@ -360,7 +363,7 @@ select option {
 
         .countdown-box {
             background-color: #000;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             color: #fff;
             display: inline-block;
@@ -372,7 +375,7 @@ select option {
         }
 
         .countdown-label {
-            font-size: 16px;
+            font-size: 20px;
         }
 
   select option[data-price] {
@@ -385,14 +388,14 @@ select option {
  /* modifying the positions of the 2 containers */
 .game-list-container {
     position: absolute;
-    top: 82%;
+    top: 88%;
     left: 45%;
     transform: translate(-50%, -50%);
     width: 36%; 
     max-width: 300px;
     text-align: center; 
     font-family: 'Georgia';
-}
+} 
 
 .game-list-container2 {
       position: absolute;
@@ -411,4 +414,11 @@ select option {
   z-index: 4; 
 }
 
-
+.countdown-wrapper {
+    background: linear-gradient(to bottom, #FF00CC, #333399);
+    padding: 10px;
+    border: 1px solid #ccc;
+    max-width: 65%;
+    margin-left: 17%;
+    text-align: center;
+}

@@ -461,9 +461,13 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
-"Knicks @ Cavaliers 7:30am",
-"Spurs @ Suns 10:00am",
-"Magic @ Clippers 10:30am",
+"Cavaliers @ Pacers 7:00am",
+"Knicks @ Bucks 7:30am",
+"Warriors @ Thunder 8:00am",
+"Wizards @ Heat 8:00am",
+"Nets @ Bulls 8:00am",
+"Grizzlies @ Blazers 10:00am",
+"Mavericks @ Nuggets 10:00am",
 ];
 
 
@@ -488,7 +492,7 @@ function updateLineup() {
 updateLineup();
 
 function updateCountdown() {
-          const targetDate = new Date('2023-10-31T21:00:00');// Oct 31 9:00 PM
+          const targetDate = new Date('2023-11-03T21:30:00');
 const now = new Date().getTime();
 const distance = targetDate - now;
 
@@ -549,20 +553,3 @@ populateGameListSecondDay();
 // </div>
 //</div>
 // </div>
-   
-           
-
-             
-            
-
-        
-
-  
-   
-       
-        
-         
-
-
-
- 

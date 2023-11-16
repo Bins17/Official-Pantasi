@@ -461,14 +461,9 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
-"Mavericks @ Wizards 8:00am",
-"Bucks @ Raptors 8:30am",
-"Celtics @ Sixers 8:30am",
-"Knicks @ Hawks 8:30am",
-"Magic @ Bulls 9:00am",
-"Timberwolves @ Suns 10:00am",
-"Kings @ Lakers 11:00am",
-"Cavaliers @ Blazers 11:00am",
+"Nets @ Heat 8:30am",
+"Thunder @ Warriors 11:00am",
+
 ];
 
 
@@ -493,7 +488,7 @@ function updateLineup() {
 updateLineup();
 
 function updateCountdown() {
-          const targetDate = new Date('2023-11-15T21:30:00');// Oct 31 9:00 PM
+          const targetDate = new Date('2023-11-16T21:30:00');// Oct 31 9:00 PM
 const now = new Date().getTime();
 const distance = targetDate - now;
 
@@ -529,7 +524,17 @@ const distance = targetDate - now;
 
 
         const nbaGamesSecondDay = [
-
+       "Knicks @ Wizards 8:00am",
+       "Bucks @ Hornets 8:00am",
+       "Celtics @ Raptors 8:30am",
+       "Sixers @ Hawks 8:30am",
+       "Kings @ Spurs 8:30am",
+       "Pistons @ Cavaliers 8:30am",
+       "Nuggets @ Pelicans 9:00am",
+       "Magic @ Bulls 9:00am",
+       "Lakers @ Blazers 11:00am",
+       "Suns @ Jazz 11:00am",
+       "Rockets @ Clippers 11:30am",
    
     
 ];
@@ -547,23 +552,3 @@ function populateGameListSecondDay() {
 populateGameListSecondDay();
 
 
-
-//<div id="gameListContainer2" class="game-list-container2"> 2nd container for 2-day fantasy
-  //  <h2>NBA Games on [Oct 28, 2023]</h2>
-  // <ul id="gameListSecondDay"></ul>
-// </div>
-//</div>
-// </div>
-        
-        
-
-       
-    
-
-  
- 
-
-       
-          
-  
-    

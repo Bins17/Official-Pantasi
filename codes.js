@@ -459,10 +459,13 @@ function updateBudgetLeft() {
    budgetLeftElement.innerHTML = "Left: <span style='color: white; background-color: transparent; padding: 2px;'><span style='color: lightgreen;'>" + budgetLeft  + "k</span></span>";
 }
 
-
 const nbaGamesToday = [
-"Nets @ Heat 8:30am",
-"Thunder @ Warriors 11:00am",
+"Knicks @ Hornets 7:00am",
+"Timberwolves @ Pelicans 8:00am",
+"Heat @ Bulls 9:00am",
+"Mavericks @ Bucks 9:00am",
+"Grizzlies @ Spurs 9:00am",
+"Thunder @ Warriors 9:30am",
 
 ];
 
@@ -488,7 +491,7 @@ function updateLineup() {
 updateLineup();
 
 function updateCountdown() {
-          const targetDate = new Date('2023-11-16T21:30:00');// Oct 31 9:00 PM
+          const targetDate = new Date('2023-11-18T22:00:00');// Oct 31 9:00 PM
 const now = new Date().getTime();
 const distance = targetDate - now;
 
@@ -524,18 +527,6 @@ const distance = targetDate - now;
 
 
         const nbaGamesSecondDay = [
-       "Knicks @ Wizards 8:00am",
-       "Bucks @ Hornets 8:00am",
-       "Celtics @ Raptors 8:30am",
-       "Sixers @ Hawks 8:30am",
-       "Kings @ Spurs 8:30am",
-       "Pistons @ Cavaliers 8:30am",
-       "Nuggets @ Pelicans 9:00am",
-       "Magic @ Bulls 9:00am",
-       "Lakers @ Blazers 11:00am",
-       "Suns @ Jazz 11:00am",
-       "Rockets @ Clippers 11:30am",
-   
     
 ];
 
@@ -552,3 +543,15 @@ function populateGameListSecondDay() {
 populateGameListSecondDay();
 
 
+//<div id="gameListContainer2" class="game-list-container2"> 
+  // <h2>NBA Games on [Nov 18, 2023]</h2>
+ // <ul id="gameListSecondDay"></ul>
+//</div>
+//</div>
+
+
+
+
+
+
+       

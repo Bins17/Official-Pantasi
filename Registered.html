@@ -6,22 +6,32 @@
     <link rel="shortcut icon" type="image/png" href="ball3.png">
     <title>REGISTERED PLAYERS</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #3498db, #2ecc71);
-            margin: 0;
-            padding: 0;
+         body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-attachment: fixed;
         }
 
         .player-names-wrapper {
             background-color: #fff;
             padding: 20px;
+            font-weight: normal; 
+             width: 80%; /* Adjusted width */
+            max-width: 600px; /* Added max-width for responsiveness */
         }
 
         .white-container {
             background-color: #fff;
             padding: 20px;
-            margin: 20px; /* Add margin to separate it from the player-names-wrapper */
+            margin: 20px; 
+            font-weight: normal; 
+            width: 80%; 
+            max-width: 600px; 
         }
 
         .back-button {
@@ -29,7 +39,7 @@
             bottom: 30px;
             right: 20px;
             padding: 10px 20px;
-            background-color: #333;
+            background: linear-gradient(to bottom, #FF00CC, #333399); /* Updated background color */
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
@@ -50,11 +60,12 @@
 
         .player-names-wrapper ul li {
             font-weight: bold;
+            margin-bottom: 8px; 
         }
 
          .white-container {
-            font-weight: bold;
-         }
+            font-weight: normal; 
+                     }
          .player-names-wrapper ul li::after {
             content: " - PAID 30.0 PHP ENTRANCE FEE";
             color: #2ecc71;
@@ -62,39 +73,37 @@
     </style>
 </head>
 <body>
-    <hr></hr>
-    <h1>REGISTERED PLAYERS | QUADRO S8</h1>
-    <hr></hr>
     <a class="back-button" href="index.html">BACK</a>
     <div class="player-names-wrapper">
-        <h2>Updated as of: Oct 17, 2023: 5:38PM </h2>
+        <h2 style="font-weight: bold;">OFFICIALLY REGISTERED PLAYERS | DUO CUP S8</h2>
+        <hr> 
         <ul>
-            <li>1. Gerome Delfin (Fearless Legends)</li>
+            <li>1. Gerome Delfin (AG Lakers)</li>
+            <li>2. Minmar Dejesica (MJ Bulls)</li>
+            <li>3. Paul Edrian Gonzales (ER Warriors)</li>
+            <li>4. John Myron Marcos Mariano (MJ Spurs)</li>
+            <li>5. Yhuan Compuesto (RY Sixers)</li>
+            <li>6. James Bontigao (MJ Spurs)</li>
         </ul>
     </div>
 
     <!-- Additional white container -->
     <div class="white-container">
-        <h3>Duo Cup</h3>
+        <h3 style="font-weight: bold;">Duo Cup Participating Teams</h3>
         <hr>
-        <p>1. Ren</p>
-        <p>2. John Carlo</p>
-        <p>3. Ronniel</p>
-        <p>4. Joriel</p>
-        <p>5. Keith</p>
-        <p>6. James</p>
-        <p>7. Paolo</p>
-        <p>8. Ridley</p>
-        <p>9. Yhuan</p>
-        <p>10. Carlo</p>
-        <p>11. Jeff</p>
-        <p>12. Myron</p>
-        <p>13. Edrian</p>
-        <p>14. Vince</p>
-        <hr> POSTED: 9:36PM </hr>
+        <p>1. RD CELTICS (Ren, David)</p>
+        <p>2. CV NETS (Carl, Von)</p>
+        <p>3. MJ BULLS (Minmar, Joriel)</p>
+        <p>4. PJ MAGIC (Paolo, Jeff)</p>
+        <p>5. RY SIXERS (Ronniel, Yhuan)</p>
+        <p>6. AG LAKERS (Andrei, Gerome)</p>
+        <p>7. ER WARRIORS (Edrian, Ridley)</p>
+        <p>8. VJ TRAIL BLAZERS (Vince, John Carlo)</p>
+        <p>9. MJ SPURS (Myron, James)</p>
+        <p>10. CK KINGS (Carlo, Keith)</p>
     </div>
 </body>
 </html>
 
-            
-           
+  
+     

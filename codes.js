@@ -460,12 +460,16 @@ function updateBudgetLeft() {
 }
 
 const nbaGamesToday = [
-"Knicks @ Hornets 7:00am",
-"Timberwolves @ Pelicans 8:00am",
-"Heat @ Bulls 9:00am",
-"Mavericks @ Bucks 9:00am",
-"Grizzlies @ Spurs 9:00am",
-"Thunder @ Warriors 9:30am",
+"Sixers @ Nets 4:00am",
+"Pistons @ Raptors 5:00am",
+"Magic @ Pacers 6:00am",
+"Nuggets @ Cavaliers 7:00am",
+"Kings @ Mavericks 8:30am",
+"Suns @ Jazz 9:00am",
+"Celtics @ Grizzlies 9:00am",
+"Thunder @ Blazers 10:00am",
+"Rockets @ Lakers 10:30am",
+
 
 ];
 

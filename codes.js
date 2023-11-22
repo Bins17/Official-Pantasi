@@ -460,11 +460,20 @@ function updateBudgetLeft() {
 }
 
 const nbaGamesToday = [
-"Raptors @ Magic 8:00am",
-"Cavaliers @ Sixers 8:30am",
-"Pacers @ Hawks 8:30am",
-"Blazers @ Suns 10:00am",
-"Jazz @ Lakers 11:00am",
+"Wizards @ Hornets 8:00am",
+"Nuggets @ Magic 8:00am",
+"Bucks @ Celtics 8:30am",
+"Heat @ Cavaliers 8:30am",
+"Raptors @ Pacers 8:30am",
+"Nets @ Hawks 8:30am",
+"Grizzlies @ Rockets 9:00am",
+"Sixers @ Timberwolves 9:00am",
+"Kings @ Pelicans 9:00am",
+"Clippers @ Spurs 9:00am",
+"Bulls @ Thunder 9:00am",
+"Jazz @ Blazers 11:00am",
+"Warriors @ Suns 11:00am",
+"Mavericks @ Lakers 11:30am",
 ];
 
 
@@ -489,7 +498,7 @@ function updateLineup() {
 updateLineup();
 
 function updateCountdown() {
-          const targetDate = new Date('2023-11-21T21:30:00');// Oct 31 9:00 PM
+          const targetDate = new Date('2023-11-22T21:30:00');// Oct 31 9:00 PM
 const now = new Date().getTime();
 const distance = targetDate - now;
 

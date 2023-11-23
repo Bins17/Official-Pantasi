@@ -459,6 +459,40 @@ function updateBudgetLeft() {
    budgetLeftElement.innerHTML = "Left: <span style='color: white; background-color: transparent; padding: 2px;'><span style='color: lightgreen;'>" + budgetLeft  + "k</span></span>";
 }
 
+const nbaGamesToday = [
+"Celtics @ Magic 3:30am",
+"Suns @ Grizzlies 6:00am",
+"Heat @ Knicks 8:30am",
+"Bulls @ Raptors 8:30am",
+"Pistons @ Pacers 9:00am",
+"Kings @ Timberwolves 9:00am",
+"Wizards @ Bucks 9:00am",
+"Nuggets @ Rockets 9:00am",
+"Spurs @ Warrriors 11:00am",
+"Pelicans @ Clippers 11:30am",
+];
+
+
+function populateGameList() {
+    const gameList = document.getElementById("gameList");
+
+    nbaGamesToday.forEach((game) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = game;
+        gameList.appendChild(listItem);
+    });
+}
+
+
+populateGameList();
+
+// Function to update the lineup dynamically
+function updateLineup() {
+}
+
+
+updateLineup();
+
 function updateCountdown() {
           const targetDate = new Date('2023-11-24T21:30:00');// Oct 31 9:00 PM
 const now = new Date().getTime();

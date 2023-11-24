@@ -468,7 +468,7 @@ const nbaGamesToday = [
 "Kings @ Timberwolves 9:00am",
 "Wizards @ Bucks 9:00am",
 "Nuggets @ Rockets 9:00am",
-"Spurs @ Warrriors 11:00am",
+"Spurs @ Warriors 11:00am",
 "Pelicans @ Clippers 11:30am",
 ];
 

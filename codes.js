@@ -461,7 +461,7 @@ function updateBudgetLeft() {
 
 const nbaGamesToday = [
 "Blazers @ Bucks 4:30am",
-"Timberwolves @ Grizzies 7:00am",
+"Timberwolves @ Grizzlies 7:00am",
 "Hornets @ Magic 7:00am",
 "Hawks @ Celtics 7:00am",
 "Raptors @ Cavaliers 8:30am",

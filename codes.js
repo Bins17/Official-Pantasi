@@ -463,6 +463,7 @@ const nbaGamesToday = [
 "Blazers @ Bucks 4:30am",
 "Timberwolves @ Grizzlies 7:00am",
 "Hornets @ Magic 7:00am",
+"Suns @ Knicks 7:00am",
 "Hawks @ Celtics 7:00am",
 "Raptors @ Cavaliers 8:30am",
 "Bulls @ Nets 8:30am",

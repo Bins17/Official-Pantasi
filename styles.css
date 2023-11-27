@@ -1,63 +1,424 @@
-/* Common styles for both phone and desktop */
 body {
-  background-image: url(Dame.gif);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin-bottom: 280px;
-  margin-top: -60px;
-  padding: 0;
-  background-color: #333;
-  color: white;
+     background-image: url(Dame.gif);
+   background-size: 100% 100%; 
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   margin-bottom: 280px;
+   margin-top: -60px; /* Reset margins */
+   padding: 0; /* Reset padding */
+   background-color: #333;
+
+   color: white;
 }
 
-@media only screen and (max-width: 600px) {
-  /* Styles for screens smaller than 600px (e.g., phones) */
-  #countdown-header {
-    /* Adjust styles for smaller screens */
-  }
 
-  .selected-players-container,
-  .game-list-container,
-  .game-list-container2 {
+
+
+#totalPrice, #requiredPrice, #budgetLeft {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+.selected-players-container,
+.game-list-container, .game-list-container2 {
     border: 2px solid #007BFF;
     padding: 10px;
     margin-top: 20px;
     background-color: #f7f7f7;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    max-width: 90%; /* Adjust the width for smaller screens */
+    max-width: 330px;
     background-color: #111;
     border: 1px solid #444;
     border-radius: 5px;
-    margin-left: 5%; /* Center the containers on smaller screens */
+    margin: 20px 0;
     padding: 10px;
     display: inline-block;
-  }
+}
 
-  .selected-players-container h2,
-  .game-list-container h2,
-  .game-list-container2 h2 {
+.selected-players-container h2, .game-list-container h2, .game-list-container2 h2 {
     font-size: 18px;
     margin-bottom: 10px;
     font-family: 'Georgia';
-  }
-
-  /* Add more styles for smaller screens if needed */
 }
 
-/* Larger screens (desktop) styles */
-@media only screen and (min-width: 601px) {
-  .selected-players-container,
-  .game-list-container,
-  .game-list-container2 {
-    width: 36%; /* Adjust the width for larger screens */
-    margin-left: 17%; /* Center the containers on larger screens */
-  }
-
-  /* Add styles specific to larger screens if needed */
+.selected-players-container ul, .game-list-container ul, .game-list-container2 ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Add more media queries for different screen sizes if needed */
 
-/* Add the rest of your existing styles here */
+.selected-players-container li, .game-list-container li, .game-list-container2 li {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+.selected-players-container span, .game-list-container span, .game-list-container2 span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+body a, body button {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Default text color */
+    transition: color 0.3s, text-shadow 0.3s; /* Add smooth transition */
+}
+
+body a:hover, body button:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Increase the intensity of the glowing border */
+    color: #00bfff; /* Change text color on hover (e.g., to a bright blue) */
+}
+
+/* Circular design for position label */
+.position-circle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent; /* Make the background transparent */
+    border: 2px solid #007BFF; /* Add a blue border */
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 12px; /* Adjust the font size */
+}
+
+/* Modify the styles for the "Your Lineup" header */
+.selected-players-container h2 {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white for contrast */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center the text horizontally */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.selected-players-container h2::before {
+    content: ""; /* Add a pseudo-element for the glowing border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #00bfff; /* Set the border color to a bright blue */
+    border-radius: 5px; /* Add rounded corners */
+    opacity: 0; /* Initially make it transparent */
+    animation: glow 2s infinite; /* Apply the glowing animation */
+}
+
+.game-list-container h2, .game-list-container2 h2 {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white for contrast */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center the text horizontally */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.game-list-container h2::before, .game-list-container2 h2::before {
+    content: ""; /* Add a pseudo-element for the glowing border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #9400D3; /* Set the border color to a bright blue */
+    border-radius: 5px; /* Add rounded corners */
+    opacity: 0; /* Initially make it transparent */
+    animation: glow 2s infinite; /* Apply the glowing animation */
+}
+
+@keyframes glow {
+    10% {
+        opacity: 0.2; /* Initial opacity */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    }
+    70% {
+        opacity: 0.8; /* Maximum opacity */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
+    }
+    100% {
+        opacity: 0.2; 
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    }
+}
+
+
+body button {
+    text-decoration: none;
+    color: #fff; /* Default text color */
+    background-color: #007BFF;
+    border: 1px solid #0056b3; 
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Add smooth transitions */
+
+    /* Add a 3D-like effect with box-shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff; /* White text on hover */
+    transform: translateY(-2px); /* Move the button up slightly on hover for a 3D effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Style for the copy button */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+/* Adjust the spacing for the content below the menu */
+body {
+    padding-top: 70px;
+}
+
+/* Add styles for the dropdown container */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add some margin for spacing */
+}
+
+label {
+    font-weight: bold;
+}
+
+select:hover {
+    border-color: #007BFF;
+    background-color: #fff;
+}
+
+
+select:focus {
+    border-color: #007BFF;
+    background-color: #fff;
+}
+
+/* Reduce the max-height of the dropdown list */
+select::-ms-expand,
+select {
+    max-height: 50px;
+}
+
+/* Style for the button container */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Add space between buttons */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.sg-circle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 2px solid #007BFF;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.success-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.success-box p {
+    margin: 0;
+}
+
+.success-box.show {
+    display: block;
+}
+
+select {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 9px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Set a light gray background color */
+    color: #333;
+
+}
+
+/* Style the dropdown options (players) */
+select option {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px; /* Slightly smaller font size for options */
+    font-weight: normal; /* Reset font weight for options */
+    /* Add any other desired styles here */
+}
+
+#copyButton {
+    border-radius: 25px;
+    padding: 20px 40px;
+    background: linear-gradient(to bottom, #FF00CC, #333399); 
+    color: white;
+    font-size: 20px;
+    font-weight: bold; 
+    font-family: 'Arial Black', sans-serif;
+    border: 2px solid #9400D3;
+    cursor: pointer;
+}
+
+#copyButton:hover {
+    background-color: #777; 
+    border: 2px solid #6B0082;
+}
+
+#returnButton {
+    border-radius: 25px; 
+    padding: 20px 50px;
+     background: linear-gradient(to bottom, #FF00CC, #333399); 
+    color: white;
+    font-size: 20px;
+    font-weight: bold; 
+    font-family: 'Arial Black', sans-serif;
+    border: 2px solid #9400D3; 
+    cursor: pointer;
+}
+
+#returnButton:hover {
+    background-color: #777;
+    border: 2px solid #6B0082;
+}
+
+.game-list-container ul,
+.game-list-container li,
+.game-list-container span,
+.game-list-container2 ul,
+.game-list-container2 li,
+.game-list-container2 span {
+    text-align: center; 
+}
+
+
+#countdown {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-family: 'Goudy Bookletter 1911', sans-serif;
+        }
+
+        #countdown-header {
+    font-size: 25px;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; 
+}
+
+
+        #countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .countdown-item {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .countdown-box {
+            background-color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .countdown-time {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .countdown-label {
+            font-size: 15px;
+        }
+
+  select option[data-price] {
+           font-family: "Lucida Console", "Courier New", monospace;
+            color: black;
+        } 
+
+
+
+ /* modifying the positions of the 2 containers */
+.game-list-container {
+    position: absolute;
+    top: 102%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36%; 
+    max-width: 300px;
+    text-align: center; 
+    font-family: 'Georgia';
+} 
+
+.game-list-container2 {
+      position: absolute;
+    top: 105%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 36%; 
+    max-width: 300px;
+    text-align: center; 
+    font-family: 'Georgia';
+}
+
+#pfSelect,
+#cSelect {
+  position: relative; /* Ensure relative positioning */
+  z-index: 4; 
+}
+
+.countdown-wrapper {
+    background: linear-gradient(to bottom, #FF00CC, #333399);
+    padding: 10px;
+    border: 1px solid #ccc;
+    max-width: 65%;
+    margin-left: 17%;
+    text-align: center;
+}

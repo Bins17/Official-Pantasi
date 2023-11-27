@@ -150,6 +150,16 @@
         <a href="" >LEADERBOARD</a>
         <a href="" >NEW UPDATES</a>
     </div>
+
+    <div id="welcome-message" class="message-box">
+        <p id="welcome-text">Welcome to PantaSite!  </p>
+        <p id="welcome-text">Keep calm setting, don't stress just have fun! </p>
+        <hr>
+        <p id="welcome-text">UPCOMING UPDATES </p>
+        <p id="welcome-text"> - Fantasy Players Championships List </p>
+         <p id="welcome-text">- Cancel Counter </p>
+    </div>
+
     
     <div class="button-container">
         <div class="button" onClick="redirectToViewTeams()">
@@ -214,57 +224,23 @@
         }
     }
 
+      function showWelcomeMessage() {
+            var welcomeMessage = document.getElementById("welcome-message");
+            welcomeMessage.style.display = "block";
+
+            // 12 seconds
+            setTimeout(function () {
+                welcomeMessage.style.display = "none";
+            }, 12000);
+        }
+
+        
+        window.onload = showWelcomeMessage;
+
     </script>
 </body>
 </html>
 
 
 
-
-
-
-
  
-
-
-
-
-
-
-
- 
-          
-    
-        
-
-      
-
-
-
-
-
- 
-   
-
-        
-
-           
-           
-            
-            
-       
-         
-        
-      
-            
-          
-           
-
-        
-
-    
-              
-        
-
-         
-

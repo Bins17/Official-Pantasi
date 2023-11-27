@@ -28,6 +28,16 @@
             font-weight: bold;
         }
 
+        .BackToMenu {
+           
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #FF00CC, #333399); /* Updated background color */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 22px;
+        }
+
  
     </style>
 </head>
@@ -41,6 +51,7 @@
     </div>
 
     <div class="container">
+
         <h1 class="font-weight-bold">DUO FANTASY S8 STANDINGS</h1>
         <h2 class="font-weight-bold" style="color: green; font-size: 14px;">Updated as of: Nov 27, 12:00PM</h2>
         <table class="table table-dark table-striped"> 
@@ -136,11 +147,21 @@
      
             </tbody>
         </table>
+        <h3 class="font-weight-bold" style="margin-top: 30px;">Elimination Round Seedings Format</h3>
+
+   <p> Top 8 Teams will advance to the Quarterfinals </p>
+   <p> Bottom 2 Teams will be Eliminated </p>
+   <p> For Full Tournament Details view <a href="https://www.facebook.com/groups/2268460530042250/permalink/3515422418679382" target="_blank">here</a>.</p>
+  
+
+
+         <button onclick="goBack()" class="BackToMenu">BACK TO MENU</button>
     </div>
 
 
             </tbody>
         </table>
+
     </div>
    
         
@@ -149,6 +170,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+        function goBack() {
+             window.location.href = 'index.html';
+        }
     </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
- var copyButton = document.getElementById("copyButton");
+var copyButton = document.getElementById("copyButton");
 
         var selectedPlayersPG = [];
         var selectedPlayersSG = [];
@@ -461,14 +461,14 @@ function updateBudgetLeft() {
 
 
 const nbaGamesToday = [
-"Raptors @ Nets 8:30am",
-"Hornets @ Knicks 8:30am",
-"Hawks @ Cavaliers 8:30am",
-"Bulls @ Celtics 8:30am",
-"Bucks @ Heat 8:30am",
-"Thunder @ Timberwolves 9:00am",
-"Rockets @ Mavericks 9:30am",
-"Warriors @ Kings 11:00am",
+"Lakers @ Pistons 8:00am",
+"Wizards @ Magic 8:00am",
+"Suns @ Raptors 8:30am",
+"Jazz @ Grizzlies 9:00am",
+"Sixers @ Pelicans 9:00am",
+"Rockets @ Nuggets 10:00am",
+"Clippers @ Kings 11:00am",
+
 ];
 
 
@@ -493,7 +493,7 @@ function updateLineup() {
 updateLineup();
 
 function updateCountdown() {
-          const targetDate = new Date('2023-11-28T21:30:00');// Oct 31 9:00 PM
+          const targetDate = new Date('2023-11-29T21:30:00');// Oct 31 9:00 PM
 const now = new Date().getTime();
 const distance = targetDate - now;
 

@@ -388,7 +388,7 @@ select option {
  /* modifying the positions of the 2 containers */
 .game-list-container {
     position: absolute;
-    top: 115%;
+    top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 36%; 
@@ -399,7 +399,7 @@ select option {
 
 .game-list-container2 {
       position: absolute;
-    top: 105%;
+    top: 95%;
     left: 75%;
     transform: translate(-50%, -50%);
     width: 36%; 
@@ -419,7 +419,7 @@ select option {
     padding: 10px;
     border: 1px solid #ccc;
     max-width: 65%;
-    margin-left: 20%;
+    margin-left: 20%; /*17% */
     text-align: center;
 }
 
@@ -441,3 +441,5 @@ select option {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         color: black;
     }
+
+

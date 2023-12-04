@@ -400,7 +400,7 @@ select option {
 .game-list-container2 {
       position: absolute;
     top: 95%;
-    left: 77%;
+    left: 80%;
     transform: translate(-50%, -50%);
     width: 36%; 
     max-width: 300px;

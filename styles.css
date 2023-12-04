@@ -1,13 +1,14 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-      margin: 10px;
-    padding: 8px; 
-    background-image: url(Dame.gif);
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
+     background-image: url(Dame.gif);
+   background-size: 100% 100%; 
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   margin-bottom: 280px;
+   margin-top: -60px; /* Reset margins */
+   padding: 0; /* Reset padding */
+   background-color: #333;
+
+   color: white;
 }
 
 
@@ -28,7 +29,8 @@ body {
     animation: blink 1s infinite;
 }
 
-.selected-players-container {
+.selected-players-container,
+.game-list-container, .game-list-container2 {
     border: 2px solid #007BFF;
     padding: 10px;
     margin-top: 20px;
@@ -62,7 +64,6 @@ body {
     justify-content: space-between; 
     align-items: center;
 }
-
 
 
 .selected-players-container span, .game-list-container span, .game-list-container2 span {
@@ -120,7 +121,26 @@ body a:hover, body button:hover {
     animation: glow 2s infinite; /* Apply the glowing animation */
 }
 
+.game-list-container h2, .game-list-container2 h2 {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white for contrast */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center the text horizontally */
+    position: relative; /* Position relative for pseudo-element */
+}
 
+.game-list-container h2::before, .game-list-container2 h2::before {
+    content: ""; /* Add a pseudo-element for the glowing border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #9400D3; /* Set the border color to a bright blue */
+    border-radius: 5px; /* Add rounded corners */
+    opacity: 0; /* Initially make it transparent */
+    animation: glow 2s infinite; /* Apply the glowing animation */
+}
 
 @keyframes glow {
     10% {
@@ -168,7 +188,10 @@ button {
 }
 
 
-
+/* Adjust the spacing for the content below the menu */
+body {
+    padding-top: 70px;
+}
 
 /* Add styles for the dropdown container */
 .dropdown-container {
@@ -297,6 +320,15 @@ select option {
     border: 2px solid #6B0082;
 }
 
+.game-list-container ul,
+.game-list-container li,
+.game-list-container span,
+.game-list-container2 ul,
+.game-list-container2 li,
+.game-list-container2 span {
+    text-align: center; 
+}
+
 
 #countdown {
             font-size: 36px;
@@ -353,16 +385,40 @@ select option {
 
 
 
+ /* modifying the positions of the 2 containers */
+.game-list-container {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36%; 
+    max-width: 300px;
+    text-align: center; 
+    font-family: 'Georgia';
+} 
 
+.game-list-container2 {
+      position: absolute;
+    top: 95%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 36%; 
+    max-width: 300px;
+    text-align: center; 
+    font-family: 'Georgia';
+}
 
-
+#pfSelect,
+#cSelect {
+  position: relative; /* Ensure relative positioning */
+  z-index: 4; 
+}
 
 .countdown-wrapper {
     background: linear-gradient(to bottom, #FF00CC, #333399);
     padding: 10px;
-    margin-top: 10px;
     border: 1px solid #ccc;
-    max-width: 60%;
+    max-width: 65%;
     margin-left: 20%; /*17% */
     text-align: center;
 }
@@ -371,103 +427,18 @@ select option {
 
 
 
-.navbar {
-            background: linear-gradient(to right, gray, black);
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 20px;
-            width: 98%;
-            border-radius: 40px;
-            border: 2px solid violet;
-            margin-top: 0;
-        }
 
-        .navbar a {
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            margin-right: 0px;
-            padding: 10px;
-        }
+.top-left-container {
+        position: absolute;
+        width: 160px; 
+        height: 150px; 
+        top: 10px;
+        left: 10px;
+        background-color: #f0f0f0;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
 
-        .navbar a:hover {
-            color: violet;
-            text-decoration: underline;
-        }
-
-        .navbar img {
-            width: 40px;
-            height: auto;
-            margin-right: 0;
-        }
-
-        #countdown-header {
-    border: 5px solid violet;
-    padding: 10px; 
-    border-radius: 15px; 
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
-
-    text-shadow: 0px 0px 10px #5cfaff,
-                 0px 0px 20px #5cfaff;
-    color: #5cfaff;
-}
-
-
-.black-wrapper {
-    width: 80%;
-     background-color: rgba(0, 0, 0, 0.7);
-     background: linear-gradient(to right, #555555, #000000);
-    padding: 20px; /* Adjust padding as needed */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Add a subtle white box shadow */
-}
-
-/* Adjust the spacing for the content below the menu and black wrapper */
-body {
-    padding-top: 20px; /* Adjust the top padding as needed */
-}
-
-
-
-
-
-
-/* Add this to your existing styles.css or create a new one */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: linear-gradient(to right, #222, #888); /* Gradient from black to gray */
-    min-width: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content ul {
-    list-style-type: none;
-   padding: 0;
-}
-
-.dropdown-content li {
-    color: white; 
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content li:hover {
-    background-color: #555; 
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
- 

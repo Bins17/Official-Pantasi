@@ -1,4 +1,4 @@
- var copyButton = document.getElementById("copyButton");
+var copyButton = document.getElementById("copyButton");
 
         var selectedPlayersPG = [];
         var selectedPlayersSG = [];
@@ -517,19 +517,8 @@ const nbaGamesToday = [
 ];
 
 
-// Function to populate the game list
-function populateGameList() {
-    const gameList = document.getElementById("gameList");
-
-    nbaGamesToday.forEach((game) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = game;
-        gameList.appendChild(listItem);
-    });
-}
 
 
-populateGameList();
 
 
 function updateCountdown() {
@@ -565,26 +554,13 @@ function updateCountdown() {
         // Initial update
         updateCountdown();
 
-        const nbaGamesSecondDay = [
-        "Knicks @ Bucks 8:30am",
-        "Suns @ Lakers 11:00am",
-];
-
-function populateGameListSecondDay() {
-    const gameListSecondDay = document.getElementById("gameListSecondDay");
-
-    nbaGamesSecondDay.forEach((game) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = game;
-        gameListSecondDay.appendChild(listItem);
-    });
-}
-
-populateGameListSecondDay();
-
+     
 
 //<div id="gameListContainer2" class="game-list-container2"> 
   // <h2>NBA Games on [Nov 18, 2023]</h2>
  // <ul id="gameListSecondDay"></ul>
 //</div>
 //</div>
+
+  
+

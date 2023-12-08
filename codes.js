@@ -5,16 +5,9 @@ var copyButton = document.getElementById("copyButton");
         var selectedPlayersSF = []; 
         var selectedPlayersPF = [];
         var selectedPlayersC = [];
-
-        var selectedPGs = [];
-      var selectedSGs = [];
-      var selectedSFs = [];
-      var selectedPFs = [];
-       var selectedCs = [];
         var totalSelectedPrice = 0;
-        var requiredPrice = 350;
+        var requiredPrice = 305;
         var budgetLeft = requiredPrice - totalSelectedPrice;
-        var totalSelectedPlayers = 0;
 
         var pgSelect = document.getElementById("pgSelect");
         var sgSelect = document.getElementById("sgSelect");
@@ -40,12 +33,12 @@ var copyButton = document.getElementById("copyButton");
             var pgName = selectedOption.value;
 
             // Check if the player is already selected
-    if (selectedPGs.includes(pgName) && selectedPGs.length >= 2) {
-        alert("You can select up to 2 players from the PG position.");
-        pgSelect.selectedIndex = 0; // Reset the dropdown
-        removePlayer(pgName, false);
-        return;
-    }
+            if (selectedPlayersPG.includes(pgName)) {
+                // Player is already selected, remove it from the selection
+                removePlayer(pgName, true);
+                return;
+
+                }
 
             var playerPrice = parseInt(selectedOption.getAttribute("data-price"));
 
@@ -63,7 +56,7 @@ var copyButton = document.getElementById("copyButton");
 
             // Create and add the player to the selected players list
             addPlayerToSelectedList(pgName, true);
-            
+
         });
            
 
@@ -76,12 +69,12 @@ var copyButton = document.getElementById("copyButton");
             var selectedOption = sgSelect.options[sgSelect.selectedIndex];
             var sgName = selectedOption.value;
 
-            if (selectedSGs.includes(sgName) && selectedSGs.length >= 2) {
-        alert("You can select up to 2 players from the PG position.");
-        sgSelect.selectedIndex = 0; // Reset the dropdown
-        removePlayer(sgName, false);
-        return;
-    }
+            // Check if the player is already selected
+            if (selectedPlayersSG.includes(sgName)) {
+                // Player is already selected, remove it from the selection
+                removePlayer(sgName, false);
+                return;
+            }
 
             var playerPrice = parseInt(selectedOption.getAttribute("data-price"));
 
@@ -90,7 +83,6 @@ var copyButton = document.getElementById("copyButton");
                 // Display an alert that the budget would be exceeded
                 alert("Adding this player would exceed the budget.");
                 sgSelect.selectedIndex = 0; 
-
                 return;
             }
 
@@ -213,7 +205,6 @@ budgetLeftElement.textContent = budgetLeft + "k/" + requiredPrice + "k";
     listItem.appendChild(removeButton);
     selectedPlayersList.appendChild(listItem);
     updateBudgetLeft();
-    totalSelectedPlayers++;
 }
 
 
@@ -262,7 +253,6 @@ function removePlayer(playerName, isPG, isSF, isPF, isCenter) {
 
          selectElement.selectedIndex = 0;
          updateBudgetLeft();
-         totalSelectedPlayers--;
           }
         }
        }
@@ -276,10 +266,10 @@ sfSelect.addEventListener("change", function() {
     var selectedOption = sfSelect.options[sfSelect.selectedIndex];
     var sfName = selectedOption.value;
 
-    if (selectedSFs.includes(sfName) && selectedSFs.length >= 2) {
-        alert("You can select up to 2 players from the PG position.");
-        sfSelect.selectedIndex = 0; // Reset the dropdown
-        removePlayer(sfName, false);
+    // Check if the player is already selected
+    if (selectedPlayersSF.includes(sfName)) {
+        // Player is already selected, remove it from the selection
+        removePlayer(sfName, false, true); // Pass true for isSF
         return;
     }
 
@@ -302,14 +292,20 @@ sfSelect.addEventListener("change", function() {
 
 
 
-    // Create and add the player to the selected players list
     addPlayerToSelectedList(sfName, false, true); // Pass true for isSF
     updateBudgetLeft();
     
 });
 
     function isMaxPlayersSelected() {
-       return totalSelectedPlayers >= 6;
+    return (
+        selectedPlayersPG.length +
+        selectedPlayersSG.length +
+        selectedPlayersSF.length +
+        selectedPlayersPF.length +
+        selectedPlayersC.length >=
+        5
+    );
 }
 
 
@@ -325,105 +321,65 @@ copyButton.addEventListener("click", function () {
         selectedPlayersPF.length === 0 ||
         selectedPlayersC.length === 0
     ) {
-        alert("Please select 1 player from each position.");
-    } else if (totalSelectedPlayers < 6) {
-        alert("Please select 6 players to create your lineup.");
+        alert("Please select 1 player from each position. ");
     } else {
-        var selectedPlayersText = "[Type your name here]\n";
+    var selectedPlayersText = "[Type your name here]\n";
 
-        //  store "6th" players
-        var sixthPlayers = {
-            PG: [],
-            SG: [],
-            SF: [],
-            PF: [],
-            C: []
-        };
+    // Loop through the selected players and add them to the string
+    selectedPlayersPG.forEach(function (player) {
+    selectedPlayersText += "PG: " + player + " " + pgSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + "\n";
+    });
 
-    
-        selectedPlayersPG.forEach(function (player, index) {
-            if (index === 0) {
-                selectedPlayersText += "PG: " + player + " " + pgSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " \n";
-            } else if (index === 1) {
-                sixthPlayers.PG.push("(6): " + player + " " + pgSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " ");
-            }
-        });
+    selectedPlayersSG.forEach(function (player) {
+        selectedPlayersText += "SG: " + player + " " + sgSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + "\n";
 
-        selectedPlayersSG.forEach(function (player, index) {
-            if (index === 0) {
-                selectedPlayersText += "SG: " + player + " " + sgSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " \n";
-            } else if (index === 1) {
-                sixthPlayers.SG.push("(6): " + player + " " + sgSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " ");
-            }
-        });
+    });
 
-        selectedPlayersSF.forEach(function (player, index) {
-            if (index === 0) {
-                selectedPlayersText += "SF: " + player + " " + sfSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " \n";
-            } else if (index === 1) {
-                sixthPlayers.SF.push("(6): " + player + " " + sfSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " ");
-            }
-        });
+    selectedPlayersSF.forEach(function (player) {
+     selectedPlayersText += "SF: " + player + " " + sfSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + "\n";
+    });
 
-        selectedPlayersPF.forEach(function (player, index) {
-            if (index === 0) {
-                selectedPlayersText += "PF: " + player + " " + pfSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " \n";
-            } else if (index === 1) {
-                sixthPlayers.PF.push("(6): " + player + " " + pfSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " ");
-            }
-        });
+   selectedPlayersPF.forEach(function (player) {
+        selectedPlayersText += "PF: " + player + " " + pfSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + "\n";
+    });
 
-        selectedPlayersC.forEach(function (player, index) {
-            if (index === 0) {
-                selectedPlayersText += "C: " + player + " " + cSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " \n";
-            } else if (index === 1) {
-                sixthPlayers.C.push("(6): " + player + " " + cSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + " ");
-            }
-        });
+   selectedPlayersC.forEach(function (player) {
+        selectedPlayersText += "C: " + player + " " + cSelect.querySelector(`option[value="${player}"]`).getAttribute("data-price") + "\n";
+    });
+   selectedPlayersText += "TOTAL: " + totalSelectedPrice + "/" + requiredPrice + "k";
 
-      
-        selectedPlayersText += sixthPlayers.PG.join("\n");
-        selectedPlayersText += sixthPlayers.SG.join("\n");
-        selectedPlayersText += sixthPlayers.SF.join("\n");
-        selectedPlayersText += sixthPlayers.PF.join("\n");
-        selectedPlayersText += sixthPlayers.C.join("\n");
 
-        
-        selectedPlayersText += "\nTOTAL: " + totalSelectedPrice + "/" + requiredPrice + "k";
 
-        // Create a temporary textarea element to hold the text
-        var textarea = document.createElement("textarea");
-        textarea.value = selectedPlayersText;
-        document.body.appendChild(textarea);
+    // Create a temporary textarea element to hold the text
+    var textarea = document.createElement("textarea");
+    textarea.value = selectedPlayersText;
+    document.body.appendChild(textarea);
 
-        // Select the text in the textarea and copy it to the clipboard
-        textarea.select();
-        document.execCommand("copy");
+    // Select the text in the textarea and copy it to the clipboard
+    textarea.select();
+    document.execCommand("copy");
 
-        // Remove the temporary textarea
-        document.body.removeChild(textarea);
-
-        // Show the success box
-        showSuccessBox();
-    }
+    // Remove the temporary textarea
+    document.body.removeChild(textarea);
+// Show the success box
+    showSuccessBox();
+}
 });
-
-
 
 
 pfSelect.addEventListener("change", function() {
     if (isMaxPlayersSelected()) {
-        alert("You have already selected the max number of players (6).");
+        alert("You have already selected the maximum number of players (5).");
         pfSelect.selectedIndex = 0; // Reset the dropdown to its initial state
         return;
     }
     var selectedOption = pfSelect.options[pfSelect.selectedIndex];
     var pfName = selectedOption.value;
 
-    if (selectedPFs.includes(pfName) && selectedPFs.length >= 2) {
-        alert("You can select up to 2 players from the PG position.");
-        pfSelect.selectedIndex = 0; // Reset the dropdown
-        removePlayer(pfName, false);
+    // Check if the player is already selected
+    if (selectedPlayersPF.includes(pfName)) {
+        // Player is already selected, remove it from the selection
+        removePlayer(pfName, false, false, true); // Pass true for isPF
         return;
     }
 
@@ -446,7 +402,6 @@ pfSelect.addEventListener("change", function() {
 
     // Create and add the player to the selected players list
     addPlayerToSelectedList(pfName, false, false, true); // Pass true for isPF
-   
 });
 
 
@@ -460,11 +415,7 @@ cSelect.addEventListener("change", function () {
             var selectedOption = cSelect.options[cSelect.selectedIndex];
             var centerName = selectedOption.value;
 
-          
-          if (selectedCs.includes(centerName) && selectedCs.length >= 2) {
-        alert("You can select up to 2 players from the PG position.");
-        cSelect.selectedIndex = 0; // Reset the dropdown
-        removePlayer(pgName, false);
+            if (selectedPlayersC.includes(centerName)) {
                 removePlayer(centerName, false, false, false, true); // Pass true for isCenter
                 return;
             }
@@ -484,9 +435,7 @@ cSelect.addEventListener("change", function () {
 
             addPlayerToSelectedList(centerName, false, false, false, true); // Pass true for isCenter
             updateBudgetLeft();
-         
         });
-
         updateBudgetLeft();
 
         function addRemoveButtonEventListener(centerName, isCenter) {
@@ -500,7 +449,7 @@ cSelect.addEventListener("change", function () {
     var successBox = document.getElementById("successBox");
     successBox.classList.add("show");
 
-    
+    // Hide the success box after 3 seconds (3000 milliseconds)
     setTimeout(function () {
         successBox.classList.remove("show");
     }, 2000); // 2 seconds
@@ -511,20 +460,15 @@ function updateBudgetLeft() {
 }
 
 
-const nbaGamesToday = [
-   "Celtics @ Pacers 8:30am",
-   "Pelicans @ Kings 11:00am",
-];
-
-
 
 
 
 
 function updateCountdown() {
-            const targetDate = new Date('2023-12-07T21:30:00');
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+          const targetDate = new Date('2023-12-08T21:30:00');
+const now = new Date().getTime();
+const distance = targetDate - now;
+
 
             // Calculate time remaining
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -554,12 +498,4 @@ function updateCountdown() {
         // Initial update
         updateCountdown();
 
-     
 
-//<div id="gameListContainer2" class="game-list-container2"> 
-  // <h2>NBA Games on [Nov 18, 2023]</h2>
- // <ul id="gameListSecondDay"></ul>
-//</div>
-//</div>
-
-  

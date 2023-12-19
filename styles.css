@@ -2,13 +2,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-      margin: 0;
-    padding: 0px; 
+      margin: 10px;
+    padding: 8px; 
     background-image: url(Lakers.jpg);
     background-size: cover;
     background-attachment: fixed;
     color: white;
-    box-sizing: border-box;
 }
 
 

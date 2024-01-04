@@ -1,15 +1,20 @@
-@media only screen and (max-width: 600px) {
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-      margin: 2%;
-    padding: 8px; 
-    background-image: url(Lakers.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
+    align-items: center;
+    margin: 2%;
+    padding: 8px;
+    background-color: #87CEEB; /* Light blue background color */
+    color: #1D1D1D; /* Dark text color */
+    font-size: 1rem; /* Set font size using a relative unit */
 }
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens */
+    body {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
 }
 
 

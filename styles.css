@@ -6,7 +6,6 @@ body {
     padding: 8px; 
     background-image: url(Lakers.jpg);
     background-size: cover;
-    background-attachment: fixed;
     color: white;
 }
 

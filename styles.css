@@ -424,13 +424,13 @@ select option {
 }
 
 .game-name {
-    font-size: 20px;
+    font-size: 14px;
     font-family: 'Georgia';
 }
 
 .game-time {
     display: block;
-    font-size: 20px; 
+    font-size: 16px; 
 }
 
 

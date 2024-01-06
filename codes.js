@@ -514,7 +514,7 @@ function updateBudgetLeft() {
 
 
 function updateCountdown() {
-            const targetDate = new Date('2024-01-06T22:00:00'); // Jan 7 9:30 PM
+            const targetDate = new Date('2024-01-06T22:30:00'); // Jan 7 9:30 PM
 
             const now = new Date().getTime();
             const distance = targetDate - now;

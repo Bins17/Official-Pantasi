@@ -279,7 +279,7 @@ select option {
     border: 2px solid #6B0082;
 }
 
-#returnButton, #cancelCounterButton, .compare-button {
+#returnButton, #cancelCounterButton, .compare-button, .clear-button {
     border-radius: 25px; 
     padding: 20px 50px;
      background: linear-gradient(to bottom, #FF00CC, #333399); 
@@ -337,7 +337,7 @@ select option {
         }
 
         .countdown-time {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
         }
 
@@ -357,7 +357,7 @@ select option {
 
 
 .countdown-wrapper {
-    background: linear-gradient(to top, #FF00CC, #333399);
+    background: linear-gradient(to bottom, #FF00CC, #333399);
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
@@ -424,13 +424,13 @@ select option {
 }
 
 .game-name {
-    font-size: 14px;
+    font-size: 20px;
     font-family: 'Georgia';
 }
 
 .game-time {
     display: block;
-    font-size: 16px; 
+    font-size: 20px; 
 }
 
 
@@ -451,7 +451,6 @@ select option {
     position: relative; 
     font-size: 18px; 
 }
-
 
 .navbar li.title a::before {
     content: ""; 
@@ -497,3 +496,140 @@ select option {
 
 
 
+
+/* Modal styles */
+.modal {
+     
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.left-content,
+.right-content {
+  width: 48%; /* Adjust the width as needed */
+}
+
+
+
+/* Example styles for text holders */
+.left-content p,
+.right-content p {
+  font-size: 16px;
+  /* Add any other styles as needed */
+}
+
+/* Increase the height of the input container */
+.left-content input,
+.right-content input {
+  height: 40px; /* Adjust the height as needed */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: #f00; /* Change color on hover if needed */
+  }
+
+
+.modal-content {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(128, 128, 128, 0.8)); /* Black-to-gray gradient */
+  margin: 5% auto;
+  padding: 40px; /* Increase padding for more space */
+  border: 1px solid #888;
+  width: 60%; /* Adjust the width as needed */
+  max-width: 800px; /* Set a maximum width if necessary */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textarea-container {
+ /* margin-bottom: 20px;  Add margin as needed */
+  display: inline-block;
+      vertical-align: top;
+}
+
+.textarea {
+  height: 200px; /* Adjust the height as needed */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+
+.close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 40px; /* Adjust the font size as needed */
+        }
+
+
+
+
+/* Add this to your existing CSS styles */
+
+/* Notification styles */
+/* Update the existing styles in your CSS */
+
+/* Notification styles */
+.notification {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.show {
+  display: block;
+  animation: fadeInOut 3s ease-out;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+.compare-button, .clear-button {
+    margin: 5px;
+    padding: 15px;
+    font-size: 15px;
+}

@@ -3,12 +3,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.6">
     <title>PantaSite | Fantasy</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles2.css">
     <link rel="shortcut icon" type="image/png" href="ball3.png">
     
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -16,18 +15,16 @@
     <ul class="navbar">
         <li class="title">
     <a href="">
-        <span class="game-title">JANUARY 7 GAMES</span>
+        <span class="game-title"><span class="game-title">JANUARY 7 GAMES</span></span>
     </a>
 </li>
-        <li><a href="#"><span class="game-name">Celtics @ Pacers</span><span class="game-time">8:00am</span></a></li>
+         <li><a href="#"><span class="game-name">Celtics @ Pacers</span><span class="game-time">8:00am</span></a></li>
         <li><a href="#"><span class="game-name">Knicks @ Wizards</span><span class="game-time">8:00am</span></a></li>
         <li><a href="#"><span class="game-name">Jazz @ Sixers</span><span class="game-time">8:30am</span></a></li>
         <li><a href="#"><span class="game-name">Bucks @ Rockets</span><span class="game-time">9:00am</span></a></li>
         
     </ul>
 </nav>
-
-
 
 
          
@@ -65,12 +62,11 @@
     </div>
 </div>
 
+     
     <label for="pgSelect">Point Guards</label>
     <div class="dropdown-container">
     <select id="pgSelect">
      <option value="" disabled selected>Price | (PG) | 2023-24 FANTASY POINTS AVERAGE  </option>
-     
-     
     
     </select>
 
@@ -79,8 +75,8 @@
     <div class="dropdown-container">
     <select id="sgSelect">
      <option value="" disabled selected>Price | (SG) | 2023-24 FANTASY POINTS AVERAGE </option>
-     
-     </select>
+       
+        </select>
 
 
 
@@ -88,8 +84,6 @@
     <div class="dropdown-container">
     <select id="sfSelect">
      <option value="" disabled selected>Price | (SF) | 2023-24 FANTASY POINTS AVERAGE </option>
-     
-   
           
    </select>
 
@@ -98,9 +92,6 @@
 <div class="dropdown-container">
     <select id="pfSelect">
     <option value="" disabled selected>Price | (PF) | 2023-24 FANTASY POINTS AVERAGE </option>
-    
-    
-     
        
     </select>
 
@@ -109,7 +100,8 @@
 <div class="dropdown-container">
     <select id="cSelect">
     <option value="" disabled selected>Price | (C) | 2023-24 FANTASY POINTS AVERAGE </option>
-    
+        
+
     </select>
 
 
@@ -138,14 +130,48 @@
 
 <div class="button-container">
 <button id="copyButton">Get Lineup</button>
-    <button id="returnButton" onclick="goBack()">Back</button>
+<button id="cancelCounterButton" onclick="cancelCounter()">Cancel Counter</button>
+<button id="returnButton" onclick="goBack()">Back</button>
 </div>
 
 
 <div id="successBox" class="success-box">
   <p id="success-message">copied! Paste it on a chat/post.</p>
 </div>
-      
+
+
+
+<div id="cancelModal" class="modal">
+  <div class="modal-content">
+
+    <div class="note">
+        
+</div>
+
+<div class="textarea-container">
+  <label for="playerNamesTextbox">Players Cancelled</label>
+  <textarea id="playerNamesTextbox" class="textarea" readonly></textarea>
+</div>
+
+<div class="content-container">
+  <div class="left-content textarea-container">
+    <span class="close-modal close-icon" onclick="closeModal()"><i class="fas fa-times"></i></span>
+    <label for="leftTextarea">Your Team's picks</label>
+    <textarea id="leftTextarea" class="textarea"></textarea>
+
+  </div>
+
+  <div class="right-content textarea-container">
+    <label for="rightTextarea">Your Opponent's picks</label>
+    <textarea id="rightTextarea" class="textarea"></textarea>
+  </div>
+</div>
+
+<button class="compare-button">Compare</button>
+<button class="clear-button" onclick="clearContainers()">Clear</button>
+
+<div id="notification" class="notification"></div>
+
 <script src="codes.js"></script>
 </body>
 </html>

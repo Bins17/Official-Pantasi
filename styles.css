@@ -497,7 +497,7 @@ select option {
 
 
 
-/* Modal styles */
+
 .modal {
      
   display: none;
@@ -515,22 +515,22 @@ select option {
 
 .left-content,
 .right-content {
-  width: 48%; /* Adjust the width as needed */
+  width: 48%; 
 }
 
 
 
-/* Example styles for text holders */
+
 .left-content p,
 .right-content p {
   font-size: 16px;
-  /* Add any other styles as needed */
+  
 }
 
-/* Increase the height of the input container */
+
 .left-content input,
 .right-content input {
-  height: 40px; /* Adjust the height as needed */
+  height: 40px; 
 }
 
 .close {
@@ -556,31 +556,31 @@ select option {
   }
 
   .close:hover {
-    color: #f00; /* Change color on hover if needed */
+    color: #f00; 
   }
 
 
 .modal-content {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(128, 128, 128, 0.8)); /* Black-to-gray gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(128, 128, 128, 0.8)); 
   margin: 5% auto;
-  padding: 40px; /* Increase padding for more space */
+  padding: 40px; 
   border: 1px solid #888;
-  width: 60%; /* Adjust the width as needed */
-  max-width: 800px; /* Set a maximum width if necessary */
+  width: 60%; 
+  max-width: 800px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .textarea-container {
- /* margin-bottom: 20px;  Add margin as needed */
+ /* margin-bottom: 20px; */
   display: inline-block;
       vertical-align: top;
 }
 
 .textarea {
-  height: 200px; /* Adjust the height as needed */
-  resize: vertical; /* Allow vertical resizing */
+  height: 200px; 
+  resize: vertical; 
 }
 
 
@@ -589,18 +589,13 @@ select option {
             top: 10px;
             right: 10px;
             cursor: pointer;
-            font-size: 40px; /* Adjust the font size as needed */
+            font-size: 40px; 
         }
 
 
 
 
-/* Add this to your existing CSS styles */
 
-/* Notification styles */
-/* Update the existing styles in your CSS */
-
-/* Notification styles */
 .notification {
   display: none;
   position: fixed;
